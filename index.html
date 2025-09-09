@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conciergerie de Luxe - Costa del Sol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --noir-profond: #000000;
+            --blanc-pur: #FFFFFF;
+            --dore-discret: #C9A961;
+            --dore-riche: #B8860B;
+            --gris-perle: #F8F8F8;
+            --dore-pale: #FEFCF7;
+            --champagne: #F7E7CE;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--noir-profond);
+            overflow-x: hidden;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.97);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            transition: all 0.4s ease;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--dore-discret);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--blanc-pur);
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-menu a:hover {
+            color: var(--dore-discret);
+        }
+
+        .btn-contact-header {
+            background: var(--dore-discret);
+            color: var(--noir-profond);
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 2px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-contact-header:hover {
+            background: #B8941F;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="sunset" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23C9A961"/><stop offset="50%" style="stop-color:%23F4E4BC"/><stop offset="100%" style="stop-color:%23FFE5B4"/></linearGradient><linearGradient id="water" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23001B3D"/><stop offset="100%" style="stop-color:%23003366"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23water)"/><circle cx="950" cy="180" r="90" fill="url(%23sunset)" opacity="0.8"/><polygon points="0,580 300,570 600,575 900,565 1200,570 1200,800 0,800" fill="%23001122"/><rect x="80" y="380" width="400" height="220" fill="%23FFFFFF" opacity="0.95"/><rect x="100" y="400" width="360" height="180" fill="%23F8F8F8"/><polygon points="80,380 280,320 480,380" fill="%23E8E8E8"/><rect x="500" y="450" width="200" height="150" fill="%23FFFFFF" opacity="0.9"/><polygon points="500,450 600,400 700,450" fill="%23F0F0F0"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            color: var(--blanc-pur);
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .btn-hero {
+            background: linear-gradient(135deg, var(--dore-discret), var(--dore-riche));
+            color: var(--noir-profond);
+            padding: 1.2rem 3rem;
+            border: 2px solid var(--dore-discret);
+            border-radius: 0;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-hero:hover {
+            background: transparent;
+            color: var(--dore-discret);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(201, 169, 97, 0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 8rem 3rem;
+            background: linear-gradient(135deg, var(--blanc-pur) 0%, var(--gris-perle) 100%);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--dore-discret), transparent);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 5rem;
+            color: var(--noir-profond);
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--dore-discret);
+        }
+
+        .section-intro {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .lifestyle .section-intro p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 3rem 2rem;
+            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(201, 169, 97, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--dore-discret);
+        }
+
+        .service-item:hover::before {
+            left: 100%;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            fill: var(--dore-discret);
+        }
+
+        .service-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--noir-profond);
+            letter-spacing: 1px;
+        }
+
+        .service-item p {
+            color: #666;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* Lifestyle Section */
+        .lifestyle {
+            padding: 8rem 3rem;
+            background: linear-gradient(135deg, var(--noir-profond) 0%, #1a1a1a 100%);
+            color: var(--blanc-pur);
+            position: relative;
+        }
+
+        .lifestyle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23C9A961" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%23C9A961" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23C9A961" opacity="0.1"/></svg>');
+            pointer-events: none;
+        }
+
+        .lifestyle .section-title {
+            color: var(--blanc-pur);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 250px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0.4));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--blanc-pur);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 2;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .gallery-bg-1 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23001122"/><path d="M50 200 Q200 150 350 200 L350 250 L50 250 Z" fill="%23FFFFFF"/><circle cx="300" cy="180" r="15" fill="%23FFD700"/></svg>') center/cover; }
+        .gallery-bg-2 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23228B22"/><circle cx="100" cy="200" r="8" fill="%23FFFFFF"/><rect x="150" y="180" width="20" height="40" fill="%238B4513"/></svg>') center/cover; }
+        .gallery-bg-3 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23800020"/><circle cx="200" cy="125" r="30" fill="%23FFD700"/><rect x="150" y="180" width="100" height="50" fill="%23FFFFFF" opacity="0.9"/></svg>') center/cover; }
+        .gallery-bg-4 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23654321"/><circle cx="100" cy="100" r="20" fill="%23FFFFFF"/><circle cx="300" cy="150" r="15" fill="%23FFFFFF"/></svg>') center/cover; }
+
+        /* Discretion Section */
+        .discretion {
+            padding: 8rem 3rem;
+            background: linear-gradient(135deg, var(--champagne) 0%, var(--dore-pale) 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .discretion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--dore-discret), transparent);
+        }
+
+        .discretion .section-title {
+            color: var(--noir-profond);
+        }
+
+        .discretion-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .discretion p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .discretion-icon {
+            width: 80px;
+            height: 80px;
+            margin: 2rem auto;
+            fill: var(--dore-discret);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 3rem;
+            background: linear-gradient(135deg, var(--noir-profond) 0%, #0a0a0a 100%);
+            color: var(--blanc-pur);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(201, 169, 97, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .contact .section-title {
+            color: var(--blanc-pur);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-intro {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: 0;
+            padding: 1.2rem 1.5rem;
+            color: var(--blanc-pur);
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--dore-discret);
+        }
+
+        .contact-form textarea {
+            grid-column: 1 / -1;
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: var(--dore-discret);
+            color: var(--noir-profond);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 2px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            justify-self: center;
+        }
+
+        .btn-submit:hover {
+            background: #B8941F;
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dore-discret);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--noir-profond);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--blanc-pur);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--dore-discret);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanc-pur);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            border-color: var(--dore-discret);
+            color: var(--dore-discret);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Prestige Concierge</a>
+            <ul class="nav-menu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#lifestyle">Lifestyle</a></li>
+                <li><a href="#discretion">Discrétion</a></li>
+                <li><a href="#contact">Contact privé</a></li>
+            </ul>
+            <a href="#contact" class="btn-contact-header">Contact privé</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="serif">Votre vie, sublimée.</h1>
+            <p>Conciergerie de luxe sur la Costa del Sol</p>
+            <a href="#contact" class="btn-hero">Contact privé</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title serif">Nos Services Exclusifs</h2>
+            <div class="section-intro">
+                <p>Notre conciergerie de luxe vous offre un accès privilégié à un monde d'expériences exceptionnelles. Chaque service est conçu sur mesure pour répondre à vos exigences les plus raffinées, avec une attention méticuleuse aux détails et un engagement absolu envers l'excellence.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <svg class="service-icon" viewBox="0 0 24 24">
+                        <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.84L18 12v7h-2v-6H8v6H6v-7l6-6.16z"/>
+                    </svg>
+                    <h3>Gestion de propriétés</h3>
+                    <p>Confiez-nous la gestion intégrale de vos résidences de prestige. Notre équipe d'experts assure la maintenance préventive, la surveillance 24h/24, l'entretien des jardins et piscines, ainsi que la coordination avec les meilleurs artisans locaux. Votre propriété reste impeccable en votre absence.</p>
+                </div>
+                <div class="service-item">
+                    <svg class="service-icon" viewBox="0 0 24 24">
+                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                    </svg>
+                    <h3>Transport privé</h3>
+                    <p>Voyagez selon vos standards d'excellence. Jets privés pour vos déplacements internationaux, yachts de luxe pour explorer la Méditerranée, véhicules de prestige avec chauffeur privé, et hélicoptères pour vos transferts express. Chaque trajet devient une expérience raffinée.</p>
+                </div>
+                <div class="service-item">
+                    <svg class="service-icon" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h3>Expériences exclusives</h3>
+                    <p>Accédez à l'inaccessible. Tables privées dans les restaurants étoilés, loges VIP aux événements culturels et sportifs, soirées privées dans des lieux d'exception, rencontres avec des personnalités, et expériences sur mesure créées uniquement pour vous. L'extraordinaire devient votre quotidien.</p>
+                </div>
+                <div class="service-item">
+                    <svg class="service-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <h3>Bien-être & santé</h3>
+                    <p>Votre santé mérite l'excellence. Consultations privées avec les meilleurs spécialistes, programmes de bien-être personnalisés, coachs sportifs et nutritionnistes de renom, spas privatisés, et accès privilégié aux centres médicaux les plus avancés. Votre équilibre est notre priorité.</p>
+                </div>
+                <div class="service-item">
+                    <svg class="service-icon" viewBox="0 0 24 24">
+                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+                    </svg>
+                    <h3>Sécurité & personnel</h3>
+                    <p>Votre tranquillité d'esprit est inestimable. Personnel de maison triés sur le volet, protection rapprochée discrète, systèmes de sécurité de pointe, et équipes d'intervention 24h/24. Chaque membre de notre réseau est sélectionné pour sa discrétion et son professionnalisme exemplaire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Section -->
+    <section id="lifestyle" class="lifestyle">
+        <div class="container">
+            <h2 class="section-title serif">Des instants uniques, taillés sur mesure</h2>
+            <div class="section-intro">
+                <p>La Costa del Sol devient votre terrain de jeu exclusif. Découvrez un art de vivre raffiné où chaque moment est orchestré pour créer des souvenirs inoubliables. De la gastronomie d'exception aux loisirs les plus prestigieux, nous transformons vos désirs en réalité.</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item gallery-bg-1">
+                    <div class="gallery-caption">
+                        <h4>Yachting de prestige</h4>
+                        <p>Explorez la Méditerranée à bord de yachts d'exception. Équipages expérimentés, itinéraires sur mesure vers les plus belles criques secrètes, et services de conciergerie maritime pour des escapades inoubliables.</p>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-bg-2">
+                    <div class="gallery-caption">
+                        <h4>Golf exclusif</h4>
+                        <p>Parcours légendaires de la Costa del Sol, réservations privilégiées, caddies professionnels et accès aux clubs les plus sélects. Perfectionnez votre jeu dans un cadre d'exception.</p>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-bg-3">
+                    <div class="gallery-caption">
+                        <h4>Gastronomie étoilée</h4>
+                        <p>Savourez l'excellence culinaire dans les restaurants les plus réputés. Chefs privés, dégustations exclusives et tables d'exception pour des expériences gastronomiques uniques.</p>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-bg-4">
+                    <div class="gallery-caption">
+                        <h4>Événements privés</h4>
+                        <p>Soirées sur mesure dans des lieux d'exception. Organisation complète, invités prestigieux et moments magiques créés spécialement pour vous et vos proches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discretion Section -->
+    <section id="discretion" class="discretion">
+        <div class="container">
+            <div class="discretion-content">
+                <h2 class="section-title serif">Confidentialité & Discrétion</h2>
+                <svg class="discretion-icon" viewBox="0 0 24 24">
+                    <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+                </svg>
+                <p>La discrétion est l'essence même de notre service. Nous opérons avec la plus stricte confidentialité, protégée par des accords de non-divulgation rigoureux. Notre réseau exclusif de partenaires partage nos valeurs d'intégrité et de respect absolu de votre intimité.</p>
+                <p>Chaque interaction est sécurisée, chaque demande traitée avec la plus grande confidentialité. Votre tranquillité d'esprit et votre réputation sont entre des mains expertes et dignes de confiance.</p>
+                <p>Nos protocoles de sécurité garantissent que vos informations personnelles et vos préférences restent strictement privées, vous permettant de profiter pleinement de nos services en toute sérénité.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title serif">Votre accès privilégié</h2>
+                <p class="contact-intro">Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité. Chaque échange est personnalisé et adapté à vos exigences spécifiques.</p>
+                <p class="contact-intro">Que ce soit pour une demande urgente ou la planification d'un projet d'envergure, nous nous engageons à vous offrir une réponse rapide et des solutions sur mesure.</p>
+                
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nom" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <input type="tel" placeholder="Téléphone">
+                    <textarea placeholder="Votre message privé" required></textarea>
+                    <button type="submit" class="btn-submit">Envoyer ma demande privée</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Email privé</h4>
+                        <p>concierge@prestige-costadelsol.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>WhatsApp VIP</h4>
+                        <p>+34 600 000 000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo serif">Prestige Concierge</div>
+            <div class="footer-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Confidentialité</a>
+                <a href="#">Conditions</a>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="LinkedIn">💼</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(13, 13, 13, 0.98)';
+            } else {
+                header.style.background = 'rgba(13, 13, 13, 0.95)';
+            }
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            const button = event.target.querySelector('.btn-submit');
+            const originalText = button.textContent;
+            
+            button.textContent = 'Message envoyé ✓';
+            button.style.background = '#28a745';
+            
+            // Reset form
+            event.target.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = 'var(--dore-discret)';
+            }, 3000);
+        }
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service items and gallery items
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.service-item, .gallery-item');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c5035955376659',t:'MTc1NzQwMzM3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
