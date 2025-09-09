@@ -294,10 +294,6 @@
             margin-bottom: 1.5rem;
         }
 
-        .lifestyle .section-intro p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -418,509 +414,6 @@
             color: var(--noir-profond);
         }
 
-        /* Private Experiences Section */
-        .private-experiences {
-            padding: 8rem 3rem;
-            background: linear-gradient(135deg, var(--noir-profond) 0%, #1a1a1a 50%, var(--noir-profond) 100%);
-            color: var(--blanc-pur);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .private-experiences::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 20%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(201, 169, 97, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .experiences-header {
-            text-align: center;
-            margin-bottom: 5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .private-experiences .section-title {
-            color: var(--blanc-pur);
-            margin-bottom: 1rem;
-        }
-
-        .experiences-subtitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            color: var(--dore-discret);
-            font-style: italic;
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-
-        .experiences-intro {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .experiences-intro p {
-            font-size: 1.1rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .experiences-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .experience-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(201, 169, 97, 0.2);
-            border-radius: 16px;
-            padding: 2.5rem 2rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--dore-discret);
-            box-shadow: 0 20px 40px rgba(201, 169, 97, 0.2);
-        }
-
-        .experience-card:hover::before {
-            left: 100%;
-        }
-
-        .experience-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--dore-discret), var(--dore-riche));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--noir-profond);
-        }
-
-        .experience-icon svg {
-            width: 28px;
-            height: 28px;
-        }
-
-        .experience-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            font-weight: 500;
-            color: var(--blanc-pur);
-            margin-bottom: 1rem;
-            letter-spacing: 0.5px;
-        }
-
-        .experience-card > p {
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 300;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .experience-destinations {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .destination-tag {
-            background: rgba(201, 169, 97, 0.2);
-            color: var(--dore-discret);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid rgba(201, 169, 97, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .destination-tag:hover {
-            background: rgba(201, 169, 97, 0.3);
-            transform: translateY(-1px);
-        }
-
-        .experience-features {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
-            font-weight: 300;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: color 0.3s ease;
-        }
-
-        .feature-item:last-child {
-            border-bottom: none;
-        }
-
-        .feature-item:hover {
-            color: var(--dore-discret);
-        }
-
-        .feature-icon {
-            font-size: 1.2rem;
-            width: 24px;
-            text-align: center;
-        }
-
-        .experiences-cta {
-            background: linear-gradient(135deg, rgba(201, 169, 97, 0.1), rgba(201, 169, 97, 0.05));
-            border: 1px solid rgba(201, 169, 97, 0.3);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            text-align: center;
-            position: relative;
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-content h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 500;
-            color: var(--blanc-pur);
-            margin-bottom: 1rem;
-        }
-
-        .cta-content p {
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 300;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-experience-primary {
-            background: linear-gradient(135deg, var(--dore-discret), var(--dore-riche));
-            color: var(--noir-profond);
-            padding: 1rem 2rem;
-            border: 2px solid var(--dore-discret);
-            border-radius: 8px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            min-width: 200px;
-        }
-
-        .btn-experience-primary:hover {
-            background: transparent;
-            color: var(--dore-discret);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(201, 169, 97, 0.3);
-        }
-
-        .btn-experience-secondary {
-            background: transparent;
-            color: var(--blanc-pur);
-            padding: 1rem 2rem;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            min-width: 200px;
-        }
-
-        .btn-experience-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--blanc-pur);
-            transform: translateY(-2px);
-        }
-
-        .cta-badge {
-            position: absolute;
-            top: -15px;
-            right: 2rem;
-            background: var(--dore-discret);
-            color: var(--noir-profond);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Premium Plans Section */
-        .premium-plans {
-            padding: 8rem 3rem;
-            background: linear-gradient(135deg, var(--gris-perle) 0%, var(--blanc-pur) 50%, var(--dore-pale) 100%);
-            position: relative;
-        }
-
-        .premium-plans::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--dore-discret), transparent);
-        }
-
-        .premium-plans .section-title {
-            color: var(--noir-profond);
-        }
-
-        .plans-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .plan-card {
-            background: var(--blanc-pur);
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            position: relative;
-            transition: all 0.4s ease;
-            border: 2px solid rgba(201, 169, 97, 0.1);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-        }
-
-        .plan-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.05), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            border-color: var(--dore-discret);
-        }
-
-        .plan-card:hover::before {
-            left: 100%;
-        }
-
-        .plan-card.featured {
-            border-color: var(--dore-discret);
-            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.2);
-            transform: scale(1.02);
-        }
-
-        .plan-card.featured:hover {
-            transform: scale(1.02) translateY(-8px);
-        }
-
-        .plan-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .plan-badge {
-            display: inline-block;
-            background: rgba(201, 169, 97, 0.1);
-            color: var(--dore-riche);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(201, 169, 97, 0.3);
-        }
-
-        .featured-badge {
-            background: var(--dore-discret);
-            color: var(--noir-profond);
-            border-color: var(--dore-discret);
-        }
-
-        .plan-name {
-            font-size: 2rem;
-            font-weight: 500;
-            color: var(--noir-profond);
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .plan-price {
-            margin-bottom: 1.5rem;
-        }
-
-        .price-amount {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--dore-riche);
-            font-family: 'Inter', sans-serif;
-        }
-
-        .price-period {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 300;
-        }
-
-        .plan-features {
-            margin-bottom: 2rem;
-        }
-
-        .plan-features ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .plan-features li {
-            padding: 0.7rem 0;
-            color: #555;
-            font-weight: 300;
-            line-height: 1.5;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            transition: color 0.3s ease;
-        }
-
-        .plan-features li:last-child {
-            border-bottom: none;
-        }
-
-        .plan-features li:hover {
-            color: var(--dore-riche);
-        }
-
-        .plan-highlight {
-            background: rgba(201, 169, 97, 0.08);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border-left: 3px solid var(--dore-discret);
-        }
-
-        .plan-highlight p {
-            margin: 0;
-            font-style: italic;
-            color: #555;
-            font-weight: 300;
-            line-height: 1.6;
-        }
-
-        .btn-plan {
-            display: block;
-            width: 100%;
-            background: var(--noir-profond);
-            color: var(--blanc-pur);
-            padding: 1rem 2rem;
-            border: 2px solid var(--noir-profond);
-            border-radius: 6px;
-            font-weight: 500;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-plan:hover {
-            background: transparent;
-            color: var(--noir-profond);
-        }
-
-        .featured-btn {
-            background: var(--dore-discret);
-            color: var(--noir-profond);
-            border-color: var(--dore-discret);
-        }
-
-        .featured-btn:hover {
-            background: transparent;
-            color: var(--dore-discret);
-        }
-
-        .plans-footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(201, 169, 97, 0.2);
-        }
-
-        .plans-footer p {
-            color: #666;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .btn-plans-contact {
-            background: linear-gradient(135deg, var(--dore-discret), var(--dore-riche));
-            color: var(--noir-profond);
-            padding: 1rem 2.5rem;
-            border: 2px solid var(--dore-discret);
-            border-radius: 6px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            display: inline-block;
-        }
-
-        .btn-plans-contact:hover {
-            background: transparent;
-            color: var(--dore-discret);
-            transform: translateY(-2px);
-        }
-
         /* Lifestyle Section */
         .lifestyle {
             padding: 8rem 3rem;
@@ -942,6 +435,10 @@
 
         .lifestyle .section-title {
             color: var(--blanc-pur);
+        }
+
+        .lifestyle .section-intro p {
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .gallery {
@@ -1291,41 +788,6 @@
             .service-actions {
                 flex-direction: column;
             }
-
-            .plans-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .plan-card.featured {
-                transform: none;
-            }
-
-            .plan-card.featured:hover {
-                transform: translateY(-8px);
-            }
-
-            .experiences-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-experience-primary,
-            .btn-experience-secondary {
-                width: 100%;
-                max-width: 280px;
-            }
-
-            .cta-badge {
-                position: static;
-                display: inline-block;
-                margin-bottom: 1rem;
-            }
         }
     </style>
 </head>
@@ -1334,12 +796,11 @@
     <header class="header">
         <nav class="nav-container">
             <a href="#" class="logo">
-                <img src="https://i.ibb.co/r2nqX6Mz/Logo-2.jpg" alt="Logo" style="height: 72px; width: auto; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-                <span style="display: none; font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 500; color: var(--dore-discret); letter-spacing: 1px; text-transform: uppercase;">Prestige Concierge</span>
+                <img src="https://i.ibb.co/r2nqX6Mz/Logo-2.jpg" alt="Prestige Concierge" style="height: 100px; width: auto; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                <span style="display: none;">Prestige Concierge</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="#services" data-translate="nav-services">Services</a></li>
-                <li><a href="#plans" data-translate="nav-plans">Packs</a></li>
                 <li><a href="#lifestyle" data-translate="nav-lifestyle">Lifestyle</a></li>
                 <li><a href="#discretion" data-translate="nav-discretion">Discrétion</a></li>
                 <li><a href="#contact" data-translate="nav-contact">Contact privé</a></li>
@@ -1463,7 +924,7 @@
                     <svg class="service-icon" viewBox="0 0 24 24">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM12 13.5l3.5-2.5v5l-3.5 2.5-3.5-2.5v-5l3.5 2.5z"/>
                     </svg>
-                    <h3 data-translate="service-6-title">Gestion patrimoniale & investissements</h3>
+                    <h3 data-translate="service-6-title">Gestion patrimoniale</h3>
                     <p data-translate="service-6-desc">Optimisez et protégez votre patrimoine avec nos experts financiers. Gestion d'investissements immobiliers de prestige, conseils fiscaux internationaux, structuration patrimoniale sur mesure.</p>
                     <div class="service-details" data-translate="service-6-details">
                         Conseillers patrimoniaux • Investissements immobiliers • Optimisation fiscale • Gestion de fortune
@@ -1513,251 +974,6 @@
         </div>
     </section>
 
-    <!-- Private Concierge Experiences Section -->
-    <section class="private-experiences">
-        <div class="container">
-            <div class="experiences-header">
-                <h2 class="section-title serif" data-translate="experiences-title">Private Concierge Experiences</h2>
-                <p class="experiences-subtitle" data-translate="experiences-subtitle">Expériences sur mesure</p>
-                <div class="experiences-intro">
-                    <p data-translate="experiences-intro">Laissez-nous orchestrer des moments d'exception qui dépassent vos attentes. Chaque expérience est conçue exclusivement pour vous, avec une attention méticuleuse aux détails et un service irréprochable disponible 24h/7j.</p>
-                </div>
-            </div>
-
-            <div class="experiences-grid">
-                <!-- Travel & Escapes -->
-                <div class="experience-card travel-card">
-                    <div class="experience-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                        </svg>
-                    </div>
-                    <h3 data-translate="exp-travel-title">Voyages & Escapades sur Mesure</h3>
-                    <p data-translate="exp-travel-desc">Évadez-vous vers des destinations d'exception avec nos itinéraires personnalisés.</p>
-                    <div class="experience-destinations">
-                        <span class="destination-tag" data-translate="dest-baleares">Baléares</span>
-                        <span class="destination-tag" data-translate="dest-marrakech">Marrakech</span>
-                        <span class="destination-tag" data-translate="dest-dubai">Dubaï</span>
-                        <span class="destination-tag" data-translate="dest-alpes">Alpes</span>
-                    </div>
-                    <div class="experience-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">✈️</span>
-                            <span data-translate="travel-feature-1">Jets privés & hébergements d'exception</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🏔️</span>
-                            <span data-translate="travel-feature-2">Ski VIP dans les Alpes suisses</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🏖️</span>
-                            <span data-translate="travel-feature-3">Villas privées aux Baléares</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Unique Experiences -->
-                <div class="experience-card unique-card">
-                    <div class="experience-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                    </div>
-                    <h3 data-translate="exp-unique-title">Expériences Uniques & Exclusives</h3>
-                    <p data-translate="exp-unique-desc">Accédez à l'inaccessible avec nos expériences sur-mesure d'exception.</p>
-                    <div class="experience-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">👨‍🍳</span>
-                            <span data-translate="unique-feature-1">Dîners privés avec chefs étoilés</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🍷</span>
-                            <span data-translate="unique-feature-2">Visites privées de vignobles d'exception</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🎨</span>
-                            <span data-translate="unique-feature-3">Rencontres exclusives avec artistes</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🚁</span>
-                            <span data-translate="unique-feature-4">Survols en hélicoptère privé</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Complete Management -->
-                <div class="experience-card management-card">
-                    <div class="experience-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
-                        </svg>
-                    </div>
-                    <h3 data-translate="exp-management-title">Gestion Complète & Sans Souci</h3>
-                    <p data-translate="exp-management-desc">Profitez pleinement pendant que nous nous occupons de chaque détail.</p>
-                    <div class="experience-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">📋</span>
-                            <span data-translate="mgmt-feature-1">Planification intégrale de A à Z</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🕐</span>
-                            <span data-translate="mgmt-feature-2">Disponibilité 24h/7j pour urgences</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🎯</span>
-                            <span data-translate="mgmt-feature-3">Coordination logistique parfaite</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">💎</span>
-                            <span data-translate="mgmt-feature-4">Service premium garanti</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="experiences-cta">
-                <div class="cta-content">
-                    <h3 data-translate="cta-title">Prêt pour une expérience d'exception ?</h3>
-                    <p data-translate="cta-subtitle">Notre équipe dédiée vous accompagne dans la création de moments inoubliables</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn-experience-primary" data-translate="btn-experience">Réservez votre expérience</a>
-                        <a href="#contact" class="btn-experience-secondary" data-translate="btn-vip-contact">Contact VIP</a>
-                    </div>
-                </div>
-                <div class="cta-badge">
-                    <span data-translate="availability-badge">Disponible 24h/7j</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium Plans Section -->
-    <section id="plans" class="premium-plans">
-        <div class="container">
-            <h2 class="section-title serif" data-translate="plans-title">Formules d'Excellence</h2>
-            <div class="section-intro">
-                <p data-translate="plans-intro">Choisissez la formule qui correspond à votre style de vie d'exception. Nos abonnements premium vous garantissent un accès privilégié à nos services les plus exclusifs, avec une disponibilité et une personnalisation adaptées à vos exigences.</p>
-            </div>
-            
-            <div class="plans-grid">
-                <!-- Prestige Access -->
-                <div class="plan-card plan-access">
-                    <div class="plan-header">
-                        <div class="plan-badge" data-translate="plan-1-badge">Essentiel</div>
-                        <h3 class="plan-name serif" data-translate="plan-1-name">Prestige Access</h3>
-                        <div class="plan-price">
-                            <span class="price-amount" data-translate="plan-1-price">2 500€</span>
-                            <span class="price-period" data-translate="price-period">/mois</span>
-                        </div>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li data-translate="plan-1-feature-1">• Conciergerie 24h/7j disponible</li>
-                            <li data-translate="plan-1-feature-2">• Gestion de propriété basique</li>
-                            <li data-translate="plan-1-feature-3">• Réservations restaurants & événements</li>
-                            <li data-translate="plan-1-feature-4">• Transport local avec chauffeur</li>
-                            <li data-translate="plan-1-feature-5">• Services domestiques standards</li>
-                            <li data-translate="plan-1-feature-6">• Assistance voyage & billeterie</li>
-                        </ul>
-                    </div>
-                    <div class="plan-highlight">
-                        <p data-translate="plan-1-highlight">Parfait pour découvrir nos services premium avec un accès privilégié aux meilleures adresses de la Costa del Sol.</p>
-                    </div>
-                    <a href="#contact" class="btn-plan" data-translate="btn-plan">Demander cette formule</a>
-                </div>
-
-                <!-- Prestige Lifestyle -->
-                <div class="plan-card plan-lifestyle featured">
-                    <div class="plan-header">
-                        <div class="plan-badge featured-badge" data-translate="plan-2-badge">Recommandé</div>
-                        <h3 class="plan-name serif" data-translate="plan-2-name">Prestige Lifestyle</h3>
-                        <div class="plan-price">
-                            <span class="price-amount" data-translate="plan-2-price">5 500€</span>
-                            <span class="price-period" data-translate="price-period">/mois</span>
-                        </div>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li data-translate="plan-2-feature-1">• Tout de Prestige Access inclus</li>
-                            <li data-translate="plan-2-feature-2">• Gestionnaire personnel dédié</li>
-                            <li data-translate="plan-2-feature-3">• Accès yachts & jets privés</li>
-                            <li data-translate="plan-2-feature-4">• Expériences VIP exclusives</li>
-                            <li data-translate="plan-2-feature-5">• Personnel domestique premium</li>
-                            <li data-translate="plan-2-feature-6">• Sécurité & protection discrète</li>
-                            <li data-translate="plan-2-feature-7">• Wellness & soins personnalisés</li>
-                        </ul>
-                    </div>
-                    <div class="plan-highlight">
-                        <p data-translate="plan-2-highlight">L'équilibre parfait entre luxe et praticité. Accédez à un monde d'expériences exceptionnelles avec votre gestionnaire personnel.</p>
-                    </div>
-                    <a href="#contact" class="btn-plan featured-btn" data-translate="btn-plan">Demander cette formule</a>
-                </div>
-
-                <!-- Prestige Elite -->
-                <div class="plan-card plan-elite">
-                    <div class="plan-header">
-                        <div class="plan-badge" data-translate="plan-3-badge">Exclusif</div>
-                        <h3 class="plan-name serif" data-translate="plan-3-name">Prestige Elite</h3>
-                        <div class="plan-price">
-                            <span class="price-amount" data-translate="plan-3-price">12 000€</span>
-                            <span class="price-period" data-translate="price-period">/mois</span>
-                        </div>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li data-translate="plan-3-feature-1">• Tout de Prestige Lifestyle inclus</li>
-                            <li data-translate="plan-3-feature-2">• Équipe dédiée 24h/24</li>
-                            <li data-translate="plan-3-feature-3">• Accès clubs privés internationaux</li>
-                            <li data-translate="plan-3-feature-4">• Événements sur-mesure exclusifs</li>
-                            <li data-translate="plan-3-feature-5">• Flotte de véhicules de prestige</li>
-                            <li data-translate="plan-3-feature-6">• Sécurité renforcée & confidentialité</li>
-                            <li data-translate="plan-3-feature-7">• Accès médecins & spécialistes privés</li>
-                            <li data-translate="plan-3-feature-8">• Gestion patrimoine & investissements</li>
-                        </ul>
-                    </div>
-                    <div class="plan-highlight">
-                        <p data-translate="plan-3-highlight">Pour les clients les plus exigeants. Une équipe complète à votre service pour une vie sans contraintes.</p>
-                    </div>
-                    <a href="#contact" class="btn-plan" data-translate="btn-plan">Demander cette formule</a>
-                </div>
-
-                <!-- Prestige Infinite -->
-                <div class="plan-card plan-infinite">
-                    <div class="plan-header">
-                        <div class="plan-badge" data-translate="plan-4-badge">Ultra VIP</div>
-                        <h3 class="plan-name serif" data-translate="plan-4-name">Prestige Infinite</h3>
-                        <div class="plan-price">
-                            <span class="price-amount" data-translate="plan-4-price">Sur demande</span>
-                        </div>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li data-translate="plan-4-feature-1">• Services illimités & sur-mesure</li>
-                            <li data-translate="plan-4-feature-2">• Conciergerie mondiale 24h/24</li>
-                            <li data-translate="plan-4-feature-3">• Accès réseau international exclusif</li>
-                            <li data-translate="plan-4-feature-4">• Événements privés de prestige</li>
-                            <li data-translate="plan-4-feature-5">• Flotte aérienne & maritime privée</li>
-                            <li data-translate="plan-4-feature-6">• Sécurité niveau diplomatique</li>
-                            <li data-translate="plan-4-feature-7">• Gestion complète style de vie</li>
-                            <li data-translate="plan-4-feature-8">• Accès aux cercles les plus fermés</li>
-                        </ul>
-                    </div>
-                    <div class="plan-highlight">
-                        <p data-translate="plan-4-highlight">L'excellence absolue sans limites. Un service sur-mesure qui redéfinit les standards du luxe et de l'exclusivité.</p>
-                    </div>
-                    <a href="#contact" class="btn-plan" data-translate="btn-vip">Contact VIP</a>
-                </div>
-            </div>
-
-            <div class="plans-footer">
-                <p data-translate="plans-footer-text">Tous nos abonnements incluent une période d'essai de 30 jours et peuvent être personnalisés selon vos besoins spécifiques.</p>
-                <div class="plans-contact">
-                    <a href="#contact" class="btn-plans-contact" data-translate="btn-plans-contact">Consultation personnalisée gratuite</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Discretion Section -->
     <section id="discretion" class="discretion">
         <div class="container">
@@ -1778,8 +994,7 @@
         <div class="container">
             <div class="contact-content">
                 <h2 class="section-title serif" data-translate="contact-title">Votre accès privilégié</h2>
-                <p class="contact-intro" data-translate="contact-intro1">Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité.</p>
-                <p class="contact-intro" data-translate="contact-intro2">Que ce soit pour une demande urgente ou la planification d'un projet d'envergure, nous nous engageons à vous offrir une réponse rapide et des solutions sur mesure.</p>
+                <p class="contact-intro" data-translate="contact-intro">Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité.</p>
                 
                 <form class="contact-form" onsubmit="handleSubmit(event)">
                     <div class="form-group">
@@ -1809,7 +1024,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo serif">
-                <img src="https://i.ibb.co/r2nqX6Mz/Logo-2.jpg" alt="Logo" style="height: 58px; width: auto; object-fit: contain; filter: brightness(0.8);" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                <img src="https://i.ibb.co/r2nqX6Mz/Logo-2.jpg" alt="Prestige Concierge" style="height: 75px; width: auto; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
                 <span style="display: none;">Prestige Concierge</span>
             </div>
             <div class="footer-links">
@@ -1825,11 +1040,10 @@
     </footer>
 
     <script>
-        // Complete translations object with all content for all languages
+        // Complete translations object
         const translations = {
             fr: {
                 'nav-services': 'Services',
-                'nav-plans': 'Packs',
                 'nav-lifestyle': 'Lifestyle',
                 'nav-discretion': 'Discrétion',
                 'nav-contact': 'Contact privé',
@@ -1854,7 +1068,7 @@
                 'service-5-title': 'Sécurité & personnel',
                 'service-5-desc': 'Votre tranquillité d\'esprit est inestimable. Personnel de maison triés sur le volet, protection rapprochée discrète, systèmes de sécurité de pointe.',
                 'service-5-details': 'Nounous multilingues • Sécurité 24/7 • Écoles internationales • Personnel de confiance',
-                'service-6-title': 'Gestion patrimoniale & investissements',
+                'service-6-title': 'Gestion patrimoniale',
                 'service-6-desc': 'Optimisez et protégez votre patrimoine avec nos experts financiers. Gestion d\'investissements immobiliers de prestige, conseils fiscaux internationaux, structuration patrimoniale sur mesure.',
                 'service-6-details': 'Conseillers patrimoniaux • Investissements immobiliers • Optimisation fiscale • Gestion de fortune',
                 'btn-reserve': 'Réserver maintenant',
@@ -1874,8 +1088,7 @@
                 'discretion-p2': 'Chaque interaction est sécurisée, chaque demande traitée avec la plus grande confidentialité. Votre tranquillité d\'esprit et votre réputation sont entre des mains expertes.',
                 'discretion-p3': 'Nos protocoles de sécurité garantissent que vos informations personnelles restent strictement privées, vous permettant de profiter pleinement de nos services.',
                 'contact-title': 'Votre accès privilégié',
-                'contact-intro1': 'Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité.',
-                'contact-intro2': 'Que ce soit pour une demande urgente ou la planification d\'un projet d\'envergure, nous nous engageons à vous offrir une réponse rapide et des solutions sur mesure.',
+                'contact-intro': 'Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité.',
                 'form-name': 'Nom',
                 'form-email': 'Email',
                 'form-phone': 'Téléphone',
@@ -1885,92 +1098,10 @@
                 'contact-whatsapp': 'WhatsApp VIP',
                 'footer-legal': 'Mentions légales',
                 'footer-privacy': 'Confidentialité',
-                'footer-terms': 'Conditions',
-                'plans-title': 'Formules d\'Excellence',
-                'plans-intro': 'Choisissez la formule qui correspond à votre style de vie d\'exception. Nos abonnements premium vous garantissent un accès privilégié à nos services les plus exclusifs, avec une disponibilité et une personnalisation adaptées à vos exigences.',
-                'plan-1-badge': 'Essentiel',
-                'plan-1-name': 'Prestige Access',
-                'plan-1-price': '2 500€',
-                'price-period': '/mois',
-                'plan-1-feature-1': '• Conciergerie 24h/7j disponible',
-                'plan-1-feature-2': '• Gestion de propriété basique',
-                'plan-1-feature-3': '• Réservations restaurants & événements',
-                'plan-1-feature-4': '• Transport local avec chauffeur',
-                'plan-1-feature-5': '• Services domestiques standards',
-                'plan-1-feature-6': '• Assistance voyage & billeterie',
-                'plan-1-highlight': 'Parfait pour découvrir nos services premium avec un accès privilégié aux meilleures adresses de la Costa del Sol.',
-                'plan-2-badge': 'Recommandé',
-                'plan-2-name': 'Prestige Lifestyle',
-                'plan-2-price': '5 500€',
-                'plan-2-feature-1': '• Tout de Prestige Access inclus',
-                'plan-2-feature-2': '• Gestionnaire personnel dédié',
-                'plan-2-feature-3': '• Accès yachts & jets privés',
-                'plan-2-feature-4': '• Expériences VIP exclusives',
-                'plan-2-feature-5': '• Personnel domestique premium',
-                'plan-2-feature-6': '• Sécurité & protection discrète',
-                'plan-2-feature-7': '• Wellness & soins personnalisés',
-                'plan-2-highlight': 'L\'équilibre parfait entre luxe et praticité. Accédez à un monde d\'expériences exceptionnelles avec votre gestionnaire personnel.',
-                'plan-3-badge': 'Exclusif',
-                'plan-3-name': 'Prestige Elite',
-                'plan-3-price': '12 000€',
-                'plan-3-feature-1': '• Tout de Prestige Lifestyle inclus',
-                'plan-3-feature-2': '• Équipe dédiée 24h/24',
-                'plan-3-feature-3': '• Accès clubs privés internationaux',
-                'plan-3-feature-4': '• Événements sur-mesure exclusifs',
-                'plan-3-feature-5': '• Flotte de véhicules de prestige',
-                'plan-3-feature-6': '• Sécurité renforcée & confidentialité',
-                'plan-3-feature-7': '• Accès médecins & spécialistes privés',
-                'plan-3-feature-8': '• Gestion patrimoine & investissements',
-                'plan-3-highlight': 'Pour les clients les plus exigeants. Une équipe complète à votre service pour une vie sans contraintes.',
-                'plan-4-badge': 'Ultra VIP',
-                'plan-4-name': 'Prestige Infinite',
-                'plan-4-price': 'Sur demande',
-                'plan-4-feature-1': '• Services illimités & sur-mesure',
-                'plan-4-feature-2': '• Conciergerie mondiale 24h/24',
-                'plan-4-feature-3': '• Accès réseau international exclusif',
-                'plan-4-feature-4': '• Événements privés de prestige',
-                'plan-4-feature-5': '• Flotte aérienne & maritime privée',
-                'plan-4-feature-6': '• Sécurité niveau diplomatique',
-                'plan-4-feature-7': '• Gestion complète style de vie',
-                'plan-4-feature-8': '• Accès aux cercles les plus fermés',
-                'plan-4-highlight': 'L\'excellence absolue sans limites. Un service sur-mesure qui redéfinit les standards du luxe et de l\'exclusivité.',
-                'btn-plan': 'Demander cette formule',
-                'btn-vip': 'Contact VIP',
-                'plans-footer-text': 'Tous nos abonnements incluent une période d\'essai de 30 jours et peuvent être personnalisés selon vos besoins spécifiques.',
-                'btn-plans-contact': 'Consultation personnalisée gratuite',
-                'experiences-title': 'Private Concierge Experiences',
-                'experiences-subtitle': 'Expériences sur mesure',
-                'experiences-intro': 'Laissez-nous orchestrer des moments d\'exception qui dépassent vos attentes. Chaque expérience est conçue exclusivement pour vous, avec une attention méticuleuse aux détails et un service irréprochable disponible 24h/7j.',
-                'exp-travel-title': 'Voyages & Escapades sur Mesure',
-                'exp-travel-desc': 'Évadez-vous vers des destinations d\'exception avec nos itinéraires personnalisés.',
-                'dest-baleares': 'Baléares',
-                'dest-marrakech': 'Marrakech',
-                'dest-dubai': 'Dubaï',
-                'dest-alpes': 'Alpes',
-                'travel-feature-1': 'Jets privés & hébergements d\'exception',
-                'travel-feature-2': 'Ski VIP dans les Alpes suisses',
-                'travel-feature-3': 'Villas privées aux Baléares',
-                'exp-unique-title': 'Expériences Uniques & Exclusives',
-                'exp-unique-desc': 'Accédez à l\'inaccessible avec nos expériences sur-mesure d\'exception.',
-                'unique-feature-1': 'Dîners privés avec chefs étoilés',
-                'unique-feature-2': 'Visites privées de vignobles d\'exception',
-                'unique-feature-3': 'Rencontres exclusives avec artistes',
-                'unique-feature-4': 'Survols en hélicoptère privé',
-                'exp-management-title': 'Gestion Complète & Sans Souci',
-                'exp-management-desc': 'Profitez pleinement pendant que nous nous occupons de chaque détail.',
-                'mgmt-feature-1': 'Planification intégrale de A à Z',
-                'mgmt-feature-2': 'Disponibilité 24h/7j pour urgences',
-                'mgmt-feature-3': 'Coordination logistique parfaite',
-                'mgmt-feature-4': 'Service premium garanti',
-                'cta-title': 'Prêt pour une expérience d\'exception ?',
-                'cta-subtitle': 'Notre équipe dédiée vous accompagne dans la création de moments inoubliables',
-                'btn-experience': 'Réservez votre expérience',
-                'btn-vip-contact': 'Contact VIP',
-                'availability-badge': 'Disponible 24h/7j'
+                'footer-terms': 'Conditions'
             },
             en: {
                 'nav-services': 'Services',
-                'nav-plans': 'Plans',
                 'nav-lifestyle': 'Lifestyle',
                 'nav-discretion': 'Privacy',
                 'nav-contact': 'Private Contact',
@@ -1995,7 +1126,7 @@
                 'service-5-title': 'Security & Staff',
                 'service-5-desc': 'Your peace of mind is invaluable. Carefully selected household staff, discreet close protection, state-of-the-art security systems.',
                 'service-5-details': 'Multilingual nannies • 24/7 security • International schools • Trusted staff',
-                'service-6-title': 'Wealth Management & Investments',
+                'service-6-title': 'Wealth Management',
                 'service-6-desc': 'Optimize and protect your wealth with our financial experts. Prestige real estate investment management, international tax advice, bespoke wealth structuring.',
                 'service-6-details': 'Wealth advisors • Real estate investments • Tax optimization • Fortune management',
                 'btn-reserve': 'Book Now',
@@ -2015,8 +1146,7 @@
                 'discretion-p2': 'Every interaction is secure, every request handled with the utmost confidentiality. Your peace of mind and reputation are in expert hands.',
                 'discretion-p3': 'Our security protocols ensure that your personal information remains strictly private, allowing you to fully enjoy our services.',
                 'contact-title': 'Your Privileged Access',
-                'contact-intro1': 'Our dedicated team is at your disposal 24/7 to respond to all your requests with the utmost confidentiality.',
-                'contact-intro2': 'Whether for an urgent request or planning a major project, we are committed to providing you with a quick response and tailor-made solutions.',
+                'contact-intro': 'Our dedicated team is at your disposal 24/7 to respond to all your requests with the utmost confidentiality.',
                 'form-name': 'Name',
                 'form-email': 'Email',
                 'form-phone': 'Phone',
@@ -2026,92 +1156,10 @@
                 'contact-whatsapp': 'VIP WhatsApp',
                 'footer-legal': 'Legal Notice',
                 'footer-privacy': 'Privacy',
-                'footer-terms': 'Terms',
-                'plans-title': 'Excellence Packages',
-                'plans-intro': 'Choose the package that matches your exceptional lifestyle. Our premium subscriptions guarantee you privileged access to our most exclusive services, with availability and personalization tailored to your requirements.',
-                'plan-1-badge': 'Essential',
-                'plan-1-name': 'Prestige Access',
-                'plan-1-price': '€2,500',
-                'price-period': '/month',
-                'plan-1-feature-1': '• 24/7 concierge available',
-                'plan-1-feature-2': '• Basic property management',
-                'plan-1-feature-3': '• Restaurant & event reservations',
-                'plan-1-feature-4': '• Local transport with chauffeur',
-                'plan-1-feature-5': '• Standard domestic services',
-                'plan-1-feature-6': '• Travel assistance & ticketing',
-                'plan-1-highlight': 'Perfect for discovering our premium services with privileged access to the best addresses on the Costa del Sol.',
-                'plan-2-badge': 'Recommended',
-                'plan-2-name': 'Prestige Lifestyle',
-                'plan-2-price': '€5,500',
-                'plan-2-feature-1': '• Everything from Prestige Access included',
-                'plan-2-feature-2': '• Dedicated personal manager',
-                'plan-2-feature-3': '• Access to yachts & private jets',
-                'plan-2-feature-4': '• Exclusive VIP experiences',
-                'plan-2-feature-5': '• Premium domestic staff',
-                'plan-2-feature-6': '• Security & discreet protection',
-                'plan-2-feature-7': '• Wellness & personalized care',
-                'plan-2-highlight': 'The perfect balance between luxury and practicality. Access a world of exceptional experiences with your personal manager.',
-                'plan-3-badge': 'Exclusive',
-                'plan-3-name': 'Prestige Elite',
-                'plan-3-price': '€12,000',
-                'plan-3-feature-1': '• Everything from Prestige Lifestyle included',
-                'plan-3-feature-2': '• Dedicated team 24/24',
-                'plan-3-feature-3': '• Access to international private clubs',
-                'plan-3-feature-4': '• Exclusive bespoke events',
-                'plan-3-feature-5': '• Fleet of prestige vehicles',
-                'plan-3-feature-6': '• Enhanced security & confidentiality',
-                'plan-3-feature-7': '• Access to private doctors & specialists',
-                'plan-3-feature-8': '• Wealth management & investments',
-                'plan-3-highlight': 'For the most demanding clients. A complete team at your service for a life without constraints.',
-                'plan-4-badge': 'Ultra VIP',
-                'plan-4-name': 'Prestige Infinite',
-                'plan-4-price': 'On request',
-                'plan-4-feature-1': '• Unlimited & bespoke services',
-                'plan-4-feature-2': '• Global concierge 24/24',
-                'plan-4-feature-3': '• Access to exclusive international network',
-                'plan-4-feature-4': '• Prestige private events',
-                'plan-4-feature-5': '• Private air & maritime fleet',
-                'plan-4-feature-6': '• Diplomatic level security',
-                'plan-4-feature-7': '• Complete lifestyle management',
-                'plan-4-feature-8': '• Access to the most exclusive circles',
-                'plan-4-highlight': 'Absolute excellence without limits. A bespoke service that redefines the standards of luxury and exclusivity.',
-                'btn-plan': 'Request this package',
-                'btn-vip': 'VIP Contact',
-                'plans-footer-text': 'All our subscriptions include a 30-day trial period and can be customized according to your specific needs.',
-                'btn-plans-contact': 'Free personalized consultation',
-                'experiences-title': 'Private Concierge Experiences',
-                'experiences-subtitle': 'Bespoke experiences',
-                'experiences-intro': 'Let us orchestrate exceptional moments that exceed your expectations. Each experience is designed exclusively for you, with meticulous attention to detail and impeccable service available 24/7.',
-                'exp-travel-title': 'Bespoke Travel & Escapes',
-                'exp-travel-desc': 'Escape to exceptional destinations with our personalized itineraries.',
-                'dest-baleares': 'Balearics',
-                'dest-marrakech': 'Marrakech',
-                'dest-dubai': 'Dubai',
-                'dest-alpes': 'Alps',
-                'travel-feature-1': 'Private jets & exceptional accommodations',
-                'travel-feature-2': 'VIP skiing in the Swiss Alps',
-                'travel-feature-3': 'Private villas in the Balearics',
-                'exp-unique-title': 'Unique & Exclusive Experiences',
-                'exp-unique-desc': 'Access the inaccessible with our exceptional bespoke experiences.',
-                'unique-feature-1': 'Private dinners with starred chefs',
-                'unique-feature-2': 'Private visits to exceptional vineyards',
-                'unique-feature-3': 'Exclusive meetings with artists',
-                'unique-feature-4': 'Private helicopter flights',
-                'exp-management-title': 'Complete & Worry-Free Management',
-                'exp-management-desc': 'Enjoy fully while we take care of every detail.',
-                'mgmt-feature-1': 'Comprehensive planning from A to Z',
-                'mgmt-feature-2': '24/7 availability for emergencies',
-                'mgmt-feature-3': 'Perfect logistical coordination',
-                'mgmt-feature-4': 'Premium service guaranteed',
-                'cta-title': 'Ready for an exceptional experience?',
-                'cta-subtitle': 'Our dedicated team accompanies you in creating unforgettable moments',
-                'btn-experience': 'Book your experience',
-                'btn-vip-contact': 'VIP Contact',
-                'availability-badge': 'Available 24/7'
+                'footer-terms': 'Terms'
             },
             es: {
                 'nav-services': 'Servicios',
-                'nav-plans': 'Paquetes',
                 'nav-lifestyle': 'Estilo de vida',
                 'nav-discretion': 'Discreción',
                 'nav-contact': 'Contacto privado',
@@ -2136,7 +1184,7 @@
                 'service-5-title': 'Seguridad y personal',
                 'service-5-desc': 'Su tranquilidad es invaluable. Personal doméstico cuidadosamente seleccionado, protección cercana discreta, sistemas de seguridad de vanguardia.',
                 'service-5-details': 'Niñeras multilingües • Seguridad 24/7 • Colegios internacionales • Personal de confianza',
-                'service-6-title': 'Gestión patrimonial e inversiones',
+                'service-6-title': 'Gestión patrimonial',
                 'service-6-desc': 'Optimice y proteja su patrimonio con nuestros expertos financieros. Gestión de inversiones inmobiliarias de prestigio, asesoramiento fiscal internacional, estructuración patrimonial a medida.',
                 'service-6-details': 'Asesores patrimoniales • Inversiones inmobiliarias • Optimización fiscal • Gestión de fortunas',
                 'btn-reserve': 'Reservar ahora',
@@ -2156,8 +1204,7 @@
                 'discretion-p2': 'Cada interacción es segura, cada solicitud tratada con la máxima confidencialidad. Su tranquilidad y reputación están en manos expertas.',
                 'discretion-p3': 'Nuestros protocolos de seguridad garantizan que su información personal permanezca estrictamente privada, permitiéndole disfrutar plenamente de nuestros servicios.',
                 'contact-title': 'Su acceso privilegiado',
-                'contact-intro1': 'Nuestro equipo dedicado está a su disposición 24h/24, 7j/7 para responder a todas sus solicitudes con la máxima confidencialidad.',
-                'contact-intro2': 'Ya sea para una solicitud urgente o la planificación de un proyecto de envergadura, nos comprometemos a ofrecerle una respuesta rápida y soluciones a medida.',
+                'contact-intro': 'Nuestro equipo dedicado está a su disposición 24h/24, 7j/7 para responder a todas sus solicitudes con la máxima confidencialidad.',
                 'form-name': 'Nombre',
                 'form-email': 'Email',
                 'form-phone': 'Teléfono',
@@ -2167,22 +1214,421 @@
                 'contact-whatsapp': 'WhatsApp VIP',
                 'footer-legal': 'Aviso legal',
                 'footer-privacy': 'Privacidad',
-                'footer-terms': 'Condiciones',
-                'plans-title': 'Paquetes de Excelencia',
-                'plans-intro': 'Elija el paquete que corresponde a su estilo de vida excepcional. Nuestras suscripciones premium le garantizan acceso privilegiado a nuestros servicios más exclusivos, con disponibilidad y personalización adaptadas a sus exigencias.',
-                'plan-1-badge': 'Esencial',
-                'plan-1-name': 'Prestige Access',
-                'plan-1-price': '2.500€',
-                'price-period': '/mes',
-                'plan-1-feature-1': '• Conserjería 24h/7j disponible',
-                'plan-1-feature-2': '• Gestión de propiedad básica',
-                'plan-1-feature-3': '• Reservas restaurantes y eventos',
-                'plan-1-feature-4': '• Transporte local con chófer',
-                'plan-1-feature-5': '• Servicios domésticos estándar',
-                'plan-1-feature-6': '• Asistencia viajes y billetes',
-                'plan-1-highlight': 'Perfecto para descubrir nuestros servicios premium con acceso privilegiado a las mejores direcciones de la Costa del Sol.',
-                'plan-2-badge': 'Recomendado',
-                'plan-2-name': 'Prestige Lifestyle',
-                'plan-2-price': '5.500€',
-                'plan-2-feature-1': '• Todo de Prestige Access incluido',
-                'plan-2-feature-2': '• Gestor personal<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c806ed77f7d58e',t:'MTc1NzQzNDk3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+                'footer-terms': 'Condiciones'
+            },
+            de: {
+                'nav-services': 'Dienstleistungen',
+                'nav-lifestyle': 'Lebensstil',
+                'nav-discretion': 'Diskretion',
+                'nav-contact': 'Privater Kontakt',
+                'btn-contact': 'Privater Kontakt',
+                'hero-title': 'Ihr Leben, veredelt.',
+                'hero-subtitle': 'Luxus-Concierge an der Costa del Sol',
+                'hero-btn': 'Privater Kontakt',
+                'services-title': 'Unsere Exklusiven Services',
+                'services-intro': 'Unser Luxus-Concierge bietet Ihnen privilegierten Zugang zu einer Welt außergewöhnlicher Erfahrungen. Jeder Service ist maßgeschneidert, um Ihre raffiniertesten Anforderungen zu erfüllen, mit akribischer Aufmerksamkeit für Details und absolutem Engagement für Exzellenz.',
+                'service-1-title': 'Immobilienverwaltung',
+                'service-1-desc': 'Vertrauen Sie uns die komplette Verwaltung Ihrer prestigeträchtigen Residenzen an. Unser Expertenteam gewährleistet präventive Wartung, 24/7-Überwachung, Garten- und Poolpflege.',
+                'service-1-details': 'Komplette Wartung • Hauspersonal • Vorbereitung vor Ankunft • Parfümierte und ausgestattete Villa',
+                'service-2-title': 'Privater Transport',
+                'service-2-desc': 'Reisen Sie nach Ihren Exzellenzstandards. Privatjets für Ihre internationalen Reisen, Luxusyachten zur Erkundung des Mittelmeers, Prestigefahrzeuge mit privatem Chauffeur.',
+                'service-2-details': 'Mercedes/Maybach Chauffeur • Ferrari/Lamborghini Supersportwagen • Privatjets • Yachten mit Crew',
+                'service-3-title': 'Exklusive Erfahrungen',
+                'service-3-desc': 'Zugang zum Unzugänglichen. Private Tische in Sternerestaurants, VIP-Logen bei kulturellen und sportlichen Veranstaltungen, private Partys an außergewöhnlichen Orten.',
+                'service-3-details': 'Michelin-Restaurants • VIP-Privatclubs • Exklusive Veranstaltungen • Maßgeschneiderte Erfahrungen',
+                'service-4-title': 'Wellness & Gesundheit',
+                'service-4-desc': 'Ihre Gesundheit verdient Exzellenz. Private Konsultationen mit den besten Spezialisten, personalisierte Wellness-Programme, renommierte Sporttrainer und Ernährungsberater.',
+                'service-4-details': 'Personal Trainer • Mobile Spa • Privatärzte • Personalisierte Ernährung',
+                'service-5-title': 'Sicherheit & Personal',
+                'service-5-desc': 'Ihr Seelenfrieden ist unbezahlbar. Sorgfältig ausgewähltes Hauspersonal, diskrete Personenschutz, modernste Sicherheitssysteme.',
+                'service-5-details': 'Mehrsprachige Kindermädchen • 24/7 Sicherheit • Internationale Schulen • Vertrauensvolles Personal',
+                'service-6-title': 'Vermögensverwaltung',
+                'service-6-desc': 'Optimieren und schützen Sie Ihr Vermögen mit unseren Finanzexperten. Verwaltung von Prestige-Immobilieninvestitionen, internationale Steuerberatung, maßgeschneiderte Vermögensstrukturierung.',
+                'service-6-details': 'Vermögensberater • Immobilieninvestitionen • Steueroptimierung • Vermögensverwaltung',
+                'btn-reserve': 'Jetzt buchen',
+                'btn-details': 'Mehr Details',
+                'lifestyle-title': 'Einzigartige Momente, maßgeschneidert',
+                'lifestyle-intro': 'Die Costa del Sol wird zu Ihrem exklusiven Spielplatz. Entdecken Sie einen raffinierten Lebensstil, bei dem jeder Moment orchestriert wird, um unvergessliche Erinnerungen zu schaffen.',
+                'gallery-1-title': 'Prestige-Yachting',
+                'gallery-1-desc': 'Erkunden Sie das Mittelmeer an Bord außergewöhnlicher Yachten. Erfahrene Crews, maßgeschneiderte Routen zu den schönsten geheimen Buchten.',
+                'gallery-2-title': 'Exklusives Golf',
+                'gallery-2-desc': 'Legendäre Plätze der Costa del Sol, privilegierte Reservierungen, professionelle Caddies und Zugang zu den exklusivsten Clubs.',
+                'gallery-3-title': 'Sterne-Gastronomie',
+                'gallery-3-desc': 'Genießen Sie kulinarische Exzellenz in den renommiertesten Restaurants. Private Köche, exklusive Verkostungen und außergewöhnliche Tische.',
+                'gallery-4-title': 'Private Veranstaltungen',
+                'gallery-4-desc': 'Maßgeschneiderte Abende an außergewöhnlichen Orten. Komplette Organisation, prestigeträchtige Gäste und magische Momente, speziell für Sie geschaffen.',
+                'discretion-title': 'Vertraulichkeit & Diskretion',
+                'discretion-p1': 'Diskretion ist das Wesen unseres Services. Wir arbeiten mit strengster Vertraulichkeit, geschützt durch rigorose Geheimhaltungsvereinbarungen.',
+                'discretion-p2': 'Jede Interaktion ist sicher, jede Anfrage wird mit größter Vertraulichkeit behandelt. Ihr Seelenfrieden und Ihr Ruf sind in Expertenhänden.',
+                'discretion-p3': 'Unsere Sicherheitsprotokolle gewährleisten, dass Ihre persönlichen Informationen streng privat bleiben und Sie unsere Services voll genießen können.',
+                'contact-title': 'Ihr privilegierter Zugang',
+                'contact-intro': 'Unser engagiertes Team steht Ihnen 24/7 zur Verfügung, um alle Ihre Anfragen mit größter Vertraulichkeit zu beantworten.',
+                'form-name': 'Name',
+                'form-email': 'E-Mail',
+                'form-phone': 'Telefon',
+                'form-message': 'Ihre private Nachricht',
+                'btn-submit': 'Meine private Anfrage senden',
+                'contact-email': 'Private E-Mail',
+                'contact-whatsapp': 'VIP WhatsApp',
+                'footer-legal': 'Impressum',
+                'footer-privacy': 'Datenschutz',
+                'footer-terms': 'Bedingungen'
+            },
+            it: {
+                'nav-services': 'Servizi',
+                'nav-lifestyle': 'Stile di vita',
+                'nav-discretion': 'Discrezione',
+                'nav-contact': 'Contatto privato',
+                'btn-contact': 'Contatto privato',
+                'hero-title': 'La vostra vita, sublimata.',
+                'hero-subtitle': 'Concierge di lusso sulla Costa del Sol',
+                'hero-btn': 'Contatto privato',
+                'services-title': 'I Nostri Servizi Esclusivi',
+                'services-intro': 'Il nostro concierge di lusso vi offre accesso privilegiato a un mondo di esperienze eccezionali. Ogni servizio è progettato su misura per soddisfare le vostre esigenze più raffinate, con attenzione meticolosa ai dettagli e impegno assoluto verso l\'eccellenza.',
+                'service-1-title': 'Gestione proprietà',
+                'service-1-desc': 'Affidateci la gestione integrale delle vostre residenze di prestigio. Il nostro team di esperti assicura manutenzione preventiva, sorveglianza 24h/24, cura di giardini e piscine.',
+                'service-1-details': 'Manutenzione completa • Personale domestico • Preparazione pre-arrivo • Villa profumata e fornita',
+                'service-2-title': 'Trasporto privato',
+                'service-2-desc': 'Viaggiate secondo i vostri standard di eccellenza. Jet privati per i vostri spostamenti internazionali, yacht di lusso per esplorare il Mediterraneo, veicoli di prestigio con autista privato.',
+                'service-2-details': 'Autista Mercedes/Maybach • Supercar Ferrari/Lamborghini • Jet privati • Yacht con equipaggio',
+                'service-3-title': 'Esperienze esclusive',
+                'service-3-desc': 'Accedete all\'inaccessibile. Tavoli privati nei ristoranti stellati, palchi VIP agli eventi culturali e sportivi, feste private in luoghi eccezionali.',
+                'service-3-details': 'Ristoranti Michelin • Club privati VIP • Eventi esclusivi • Esperienze su misura',
+                'service-4-title': 'Benessere e salute',
+                'service-4-desc': 'La vostra salute merita l\'eccellenza. Consultazioni private con i migliori specialisti, programmi di benessere personalizzati, allenatori sportivi e nutrizionisti di fama.',
+                'service-4-details': 'Allenatori personali • Spa mobile • Medici privati • Nutrizione personalizzata',
+                'service-5-title': 'Sicurezza e personale',
+                'service-5-desc': 'La vostra tranquillità è inestimabile. Personale domestico selezionato, protezione ravvicinata discreta, sistemi di sicurezza all\'avanguardia.',
+                'service-5-details': 'Tate multilingue • Sicurezza 24/7 • Scuole internazionali • Personale di fiducia',
+                'service-6-title': 'Gestione patrimoniale',
+                'service-6-desc': 'Ottimizzate e proteggete il vostro patrimonio con i nostri esperti finanziari. Gestione investimenti immobiliari di prestigio, consulenza fiscale internazionale, strutturazione patrimoniale su misura.',
+                'service-6-details': 'Consulenti patrimoniali • Investimenti immobiliari • Ottimizzazione fiscale • Gestione fortune',
+                'btn-reserve': 'Prenota ora',
+                'btn-details': 'Più dettagli',
+                'lifestyle-title': 'Momenti unici, su misura per voi',
+                'lifestyle-intro': 'La Costa del Sol diventa il vostro campo da gioco esclusivo. Scoprite uno stile di vita raffinato dove ogni momento è orchestrato per creare ricordi indimenticabili.',
+                'gallery-1-title': 'Yachting di prestigio',
+                'gallery-1-desc': 'Esplorate il Mediterraneo a bordo di yacht eccezionali. Equipaggi esperti, itinerari su misura verso le più belle calette segrete.',
+                'gallery-2-title': 'Golf esclusivo',
+                'gallery-2-desc': 'Campi leggendari della Costa del Sol, prenotazioni privilegiate, caddie professionali e accesso ai club più selezionati.',
+                'gallery-3-title': 'Gastronomia stellata',
+                'gallery-3-desc': 'Assaporate l\'eccellenza culinaria nei ristoranti più rinomati. Chef privati, degustazioni esclusive e tavoli eccezionali.',
+                'gallery-4-title': 'Eventi privati',
+                'gallery-4-desc': 'Serate su misura in luoghi eccezionali. Organizzazione completa, ospiti prestigiosi e momenti magici creati appositamente per voi.',
+                'discretion-title': 'Riservatezza e Discrezione',
+                'discretion-p1': 'La discrezione è l\'essenza stessa del nostro servizio. Operiamo con la più rigorosa riservatezza, protetta da accordi di non divulgazione rigorosi.',
+                'discretion-p2': 'Ogni interazione è sicura, ogni richiesta trattata con la massima riservatezza. La vostra tranquillità e reputazione sono in mani esperte.',
+                'discretion-p3': 'I nostri protocolli di sicurezza garantiscono che le vostre informazioni personali rimangano strettamente private, permettendovi di godere pienamente dei nostri servizi.',
+                'contact-title': 'Il vostro accesso privilegiato',
+                'contact-intro': 'Il nostro team dedicato è a vostra disposizione 24h/24, 7g/7 per rispondere a tutte le vostre richieste con la massima riservatezza.',
+                'form-name': 'Nome',
+                'form-email': 'Email',
+                'form-phone': 'Telefono',
+                'form-message': 'Il vostro messaggio privato',
+                'btn-submit': 'Invia la mia richiesta privata',
+                'contact-email': 'Email privata',
+                'contact-whatsapp': 'WhatsApp VIP',
+                'footer-legal': 'Note legali',
+                'footer-privacy': 'Privacy',
+                'footer-terms': 'Condizioni'
+            },
+            ru: {
+                'nav-services': 'Услуги',
+                'nav-lifestyle': 'Образ жизни',
+                'nav-discretion': 'Конфиденциальность',
+                'nav-contact': 'Частный контакт',
+                'btn-contact': 'Частный контакт',
+                'hero-title': 'Ваша жизнь, возвышенная.',
+                'hero-subtitle': 'Люксовый консьерж на Коста-дель-Соль',
+                'hero-btn': 'Частный контакт',
+                'services-title': 'Наши Эксклюзивные Услуги',
+                'services-intro': 'Наш люксовый консьерж предлагает вам привилегированный доступ к миру исключительных впечатлений. Каждая услуга разработана индивидуально для удовлетворения ваших самых изысканных требований, с тщательным вниманием к деталям и абсолютной приверженностью к совершенству.',
+                'service-1-title': 'Управление недвижимостью',
+                'service-1-desc': 'Доверьте нам полное управление вашими престижными резиденциями. Наша команда экспертов обеспечивает профилактическое обслуживание, круглосуточное наблюдение, уход за садами и бассейнами.',
+                'service-1-details': 'Полное обслуживание • Домашний персонал • Подготовка к приезду • Ароматизированная и укомплектованная вилла',
+                'service-2-title': 'Частный транспорт',
+                'service-2-desc': 'Путешествуйте согласно вашим стандартам совершенства. Частные самолеты для международных поездок, роскошные яхты для исследования Средиземноморья, престижные автомобили с частным шофером.',
+                'service-2-details': 'Шофер Mercedes/Maybach • Суперкары Ferrari/Lamborghini • Частные самолеты • Яхты с экипажем',
+                'service-3-title': 'Эксклюзивные впечатления',
+                'service-3-desc': 'Получите доступ к недоступному. Частные столики в звездных ресторанах, VIP-ложи на культурных и спортивных мероприятиях, частные вечеринки в исключительных местах.',
+                'service-3-details': 'Рестораны Мишлен • VIP частные клубы • Эксклюзивные мероприятия • Индивидуальные впечатления',
+                'service-4-title': 'Велнес и здоровье',
+                'service-4-desc': 'Ваше здоровье заслуживает совершенства. Частные консультации с лучшими специалистами, персонализированные велнес-программы, известные спортивные тренеры и диетологи.',
+                'service-4-details': 'Персональные тренеры • Мобильный спа • Частные врачи • Персонализированное питание',
+                'service-5-title': 'Безопасность и персонал',
+                'service-5-desc': 'Ваше спокойствие бесценно. Тщательно отобранный домашний персонал, дискретная личная охрана, современные системы безопасности.',
+                'service-5-details': 'Многоязычные няни • Безопасность 24/7 • Международные школы • Доверенный персонал',
+                'service-6-title': 'Управление активами',
+                'service-6-desc': 'Оптимизируйте и защитите ваши активы с нашими финансовыми экспертами. Управление престижными инвестициями в недвижимость, международное налоговое консультирование, индивидуальное структурирование активов.',
+                'service-6-details': 'Консультанты по активам • Инвестиции в недвижимость • Налоговая оптимизация • Управление состоянием',
+                'btn-reserve': 'Забронировать сейчас',
+                'btn-details': 'Подробнее',
+                'lifestyle-title': 'Уникальные моменты, созданные для вас',
+                'lifestyle-intro': 'Коста-дель-Соль становится вашей эксклюзивной игровой площадкой. Откройте для себя изысканный образ жизни, где каждый момент организован для создания незабываемых воспоминаний.',
+                'gallery-1-title': 'Престижный яхтинг',
+                'gallery-1-desc': 'Исследуйте Средиземноморье на борту исключительных яхт. Опытные экипажи, индивидуальные маршруты к самым красивым секретным бухтам.',
+                'gallery-2-title': 'Эксклюзивный гольф',
+                'gallery-2-desc': 'Легендарные поля Коста-дель-Соль, привилегированные бронирования, профессиональные кэдди и доступ к самым избранным клубам.',
+                'gallery-3-title': 'Звездная гастрономия',
+                'gallery-3-desc': 'Насладитесь кулинарным совершенством в самых известных ресторанах. Частные повара, эксклюзивные дегустации и исключительные столики.',
+                'gallery-4-title': 'Частные мероприятия',
+                'gallery-4-desc': 'Индивидуальные вечера в исключительных местах. Полная организация, престижные гости и волшебные моменты, созданные специально для вас.',
+                'discretion-title': 'Конфиденциальность и Дискретность',
+                'discretion-p1': 'Дискретность - это сама суть нашего сервиса. Мы работаем с строжайшей конфиденциальностью, защищенной строгими соглашениями о неразглашении.',
+                'discretion-p2': 'Каждое взаимодействие безопасно, каждый запрос обрабатывается с максимальной конфиденциальностью. Ваше спокойствие и репутация в экспертных руках.',
+                'discretion-p3': 'Наши протоколы безопасности гарантируют, что ваша личная информация остается строго конфиденциальной, позволяя вам полностью наслаждаться нашими услугами.',
+                'contact-title': 'Ваш привилегированный доступ',
+                'contact-intro': 'Наша преданная команда в вашем распоряжении 24/7 для ответа на все ваши запросы с максимальной конфиденциальностью.',
+                'form-name': 'Имя',
+                'form-email': 'Электронная почта',
+                'form-phone': 'Телефон',
+                'form-message': 'Ваше частное сообщение',
+                'btn-submit': 'Отправить мой частный запрос',
+                'contact-email': 'Частная почта',
+                'contact-whatsapp': 'VIP WhatsApp',
+                'footer-legal': 'Правовая информация',
+                'footer-privacy': 'Конфиденциальность',
+                'footer-terms': 'Условия'
+            },
+            ar: {
+                'nav-services': 'الخدمات',
+                'nav-lifestyle': 'نمط الحياة',
+                'nav-discretion': 'السرية',
+                'nav-contact': 'اتصال خاص',
+                'btn-contact': 'اتصال خاص',
+                'hero-title': 'حياتكم، مُرتقية.',
+                'hero-subtitle': 'خدمة الكونسيرج الفاخرة في كوستا ديل سول',
+                'hero-btn': 'اتصال خاص',
+                'services-title': 'خدماتنا الحصرية',
+                'services-intro': 'تقدم لكم خدمة الكونسيرج الفاخرة وصولاً مميزاً إلى عالم من التجارب الاستثنائية. كل خدمة مصممة خصيصاً لتلبية متطلباتكم الأكثر رقياً، مع اهتمام دقيق بالتفاصيل والتزام مطلق بالتميز.',
+                'service-1-title': 'إدارة العقارات',
+                'service-1-desc': 'اعهدوا إلينا بالإدارة الشاملة لمساكنكم المرموقة. فريق خبرائنا يضمن الصيانة الوقائية والمراقبة على مدار الساعة وصيانة الحدائق والمسابح.',
+                'service-1-details': 'صيانة شاملة • طاقم منزلي • تحضير قبل الوصول • فيلا معطرة ومجهزة',
+                'service-2-title': 'النقل الخاص',
+                'service-2-desc': 'سافروا وفقاً لمعايير التميز الخاصة بكم. طائرات خاصة لرحلاتكم الدولية، يخوت فاخرة لاستكشاف البحر المتوسط، مركبات مرموقة مع سائق خاص.',
+                'service-2-details': 'سائق مرسيدس/مايباخ • سيارات فيراري/لامبورغيني الفائقة • طائرات خاصة • يخوت مع طاقم',
+                'service-3-title': 'تجارب حصرية',
+                'service-3-desc': 'الوصول إلى ما لا يمكن الوصول إليه. طاولات خاصة في المطاعم الحائزة على نجوم، مقاصير VIP في الفعاليات الثقافية والرياضية، حفلات خاصة في أماكن استثنائية.',
+                'service-3-details': 'مطاعم ميشلان • نوادي VIP خاصة • فعاليات حصرية • تجارب مخصصة',
+                'service-4-title': 'العافية والصحة',
+                'service-4-desc': 'صحتكم تستحق التميز. استشارات خاصة مع أفضل المختصين، برامج عافية مخصصة، مدربين رياضيين وأخصائيي تغذية مشهورين.',
+                'service-4-details': 'مدربين شخصيين • سبا متنقل • أطباء خاصون • تغذية مخصصة',
+                'service-5-title': 'الأمن والموظفين',
+                'service-5-desc': 'راحة بالكم لا تقدر بثمن. موظفين منزليين منتقين بعناية، حماية شخصية سرية، أنظمة أمان متطورة.',
+                'service-5-details': 'مربيات متعددة اللغات • أمان 24/7 • مدارس دولية • موظفين موثوقين',
+                'service-6-title': 'إدارة الثروات',
+                'service-6-desc': 'حسّنوا واحموا ثروتكم مع خبرائنا الماليين. إدارة استثمارات عقارية مرموقة، استشارات ضريبية دولية، هيكلة ثروات مخصصة.',
+                'service-6-details': 'مستشارو ثروات • استثمارات عقارية • تحسين ضريبي • إدارة ثروات',
+                'btn-reserve': 'احجز الآن',
+                'btn-details': 'المزيد من التفاصيل',
+                'lifestyle-title': 'لحظات فريدة، مصممة خصيصاً لكم',
+                'lifestyle-intro': 'تصبح كوستا ديل سول ملعبكم الحصري. اكتشفوا أسلوب حياة راقي حيث كل لحظة منسقة لخلق ذكريات لا تُنسى.',
+                'gallery-1-title': 'يخوت مرموقة',
+                'gallery-1-desc': 'استكشفوا البحر المتوسط على متن يخوت استثنائية. أطقم ذات خبرة، مسارات مخصصة نحو أجمل الخلجان السرية.',
+                'gallery-2-title': 'غولف حصري',
+                'gallery-2-desc': 'ملاعب أسطورية في كوستا ديل سول، حجوزات مميزة، كاديز محترفين ووصول للنوادي الأكثر انتقائية.',
+                'gallery-3-title': 'فن الطهي المتميز',
+                'gallery-3-desc': 'تذوقوا التميز الطهوي في أشهر المطاعم. طهاة خاصون، تذوقات حصرية وطاولات استثنائية.',
+                'gallery-4-title': 'فعاليات خاصة',
+                'gallery-4-desc': 'أمسيات مخصصة في أماكن استثنائية. تنظيم شامل، ضيوف مرموقين ولحظات سحرية مخلوقة خصيصاً لكم.',
+                'discretion-title': 'السرية والكتمان',
+                'discretion-p1': 'الكتمان هو جوهر خدمتنا. نعمل بأقصى درجات السرية، محمية باتفاقيات عدم إفشاء صارمة.',
+                'discretion-p2': 'كل تفاعل آمن، كل طلب يُعامل بأقصى درجات السرية. راحة بالكم وسمعتكم في أيدٍ خبيرة.',
+                'discretion-p3': 'بروتوكولات الأمان لدينا تضمن بقاء معلوماتكم الشخصية سرية تماماً، مما يتيح لكم الاستمتاع الكامل بخدماتنا.',
+                'contact-title': 'وصولكم المميز',
+                'contact-intro': 'فريقنا المخصص في خدمتكم 24/7 للرد على جميع طلباتكم بأقصى درجات السرية.',
+                'form-name': 'الاسم',
+                'form-email': 'البريد الإلكتروني',
+                'form-phone': 'الهاتف',
+                'form-message': 'رسالتكم الخاصة',
+                'btn-submit': 'إرسال طلبي الخاص',
+                'contact-email': 'بريد إلكتروني خاص',
+                'contact-whatsapp': 'واتساب VIP',
+                'footer-legal': 'الإشعار القانوني',
+                'footer-privacy': 'الخصوصية',
+                'footer-terms': 'الشروط'
+            },
+            nl: {
+                'nav-services': 'Diensten',
+                'nav-lifestyle': 'Levensstijl',
+                'nav-discretion': 'Discretie',
+                'nav-contact': 'Privé contact',
+                'btn-contact': 'Privé contact',
+                'hero-title': 'Uw leven, verheven.',
+                'hero-subtitle': 'Luxe conciërge aan de Costa del Sol',
+                'hero-btn': 'Privé contact',
+                'services-title': 'Onze Exclusieve Diensten',
+                'services-intro': 'Onze luxe conciërge biedt u bevoorrechte toegang tot een wereld van uitzonderlijke ervaringen. Elke dienst is op maat ontworpen om aan uw meest verfijnde eisen te voldoen, met nauwgezette aandacht voor detail en absolute toewijding aan excellentie.',
+                'service-1-title': 'Vastgoedbeheer',
+                'service-1-desc': 'Vertrouw ons het complete beheer van uw prestigieuze residenties toe. Ons team van experts zorgt voor preventief onderhoud, 24/7 bewaking, tuin- en zwembadonderhoud.',
+                'service-1-details': 'Compleet onderhoud • Huispersoneel • Voorbereiding voor aankomst • Geparfumeerde en voorziene villa',
+                'service-2-title': 'Privé vervoer',
+                'service-2-desc': 'Reis volgens uw standaarden van excellentie. Privéjets voor uw internationale reizen, luxe jachten om de Middellandse Zee te verkennen, prestigieuze voertuigen met privéchauffeur.',
+                'service-2-details': 'Mercedes/Maybach chauffeur • Ferrari/Lamborghini supercars • Privéjets • Jachten met bemanning',
+                'service-3-title': 'Exclusieve ervaringen',
+                'service-3-desc': 'Toegang tot het ontoegankelijke. Privétafels in sterrenrestaurants, VIP-loges bij culturele en sportevenementen, privéfeesten op uitzonderlijke locaties.',
+                'service-3-details': 'Michelin restaurants • VIP privéclubs • Exclusieve evenementen • Op maat gemaakte ervaringen',
+                'service-4-title': 'Welzijn & gezondheid',
+                'service-4-desc': 'Uw gezondheid verdient excellentie. Privéconsultaties met de beste specialisten, gepersonaliseerde welzijnsprogramma\'s, gerenommeerde sporttrainers en voedingsdeskundigen.',
+                'service-4-details': 'Persoonlijke trainers • Mobiele spa • Privéartsen • Gepersonaliseerde voeding',
+                'service-5-title': 'Veiligheid & personeel',
+                'service-5-desc': 'Uw gemoedsrust is onbetaalbaar. Zorgvuldig geselecteerd huispersoneel, discrete persoonlijke beveiliging, geavanceerde beveiligingssystemen.',
+                'service-5-details': 'Meertalige kinderjuffrouwen • 24/7 beveiliging • Internationale scholen • Vertrouwd personeel',
+                'service-6-title': 'Vermogensbeheer',
+                'service-6-desc': 'Optimaliseer en bescherm uw vermogen met onze financiële experts. Beheer van prestigieuze vastgoedinvesteringen, internationaal belastingadvies, op maat gemaakte vermogensstructurering.',
+                'service-6-details': 'Vermogensadviseurs • Vastgoedinvesteringen • Belastingoptimalisatie • Vermogensbeheer',
+                'btn-reserve': 'Nu boeken',
+                'btn-details': 'Meer details',
+                'lifestyle-title': 'Unieke momenten, op maat gemaakt',
+                'lifestyle-intro': 'De Costa del Sol wordt uw exclusieve speeltuin. Ontdek een verfijnde levensstijl waar elk moment wordt georkestreerd om onvergetelijke herinneringen te creëren.',
+                'gallery-1-title': 'Prestigieus jachten',
+                'gallery-1-desc': 'Verken de Middellandse Zee aan boord van uitzonderlijke jachten. Ervaren bemanningen, op maat gemaakte routes naar de mooiste geheime baaien.',
+                'gallery-2-title': 'Exclusief golf',
+                'gallery-2-desc': 'Legendarische banen van de Costa del Sol, bevoorrechte reserveringen, professionele caddies en toegang tot de meest selecte clubs.',
+                'gallery-3-title': 'Sterren gastronomie',
+                'gallery-3-desc': 'Proef culinaire excellentie in de meest gerenommeerde restaurants. Privékoks, exclusieve proeverijen en uitzonderlijke tafels.',
+                'gallery-4-title': 'Privé evenementen',
+                'gallery-4-desc': 'Op maat gemaakte avonden op uitzonderlijke locaties. Complete organisatie, prestigieuze gasten en magische momenten speciaal voor u gecreëerd.',
+                'discretion-title': 'Vertrouwelijkheid & Discretie',
+                'discretion-p1': 'Discretie is de essentie van onze service. We opereren met de strengste vertrouwelijkheid, beschermd door rigoureuze geheimhoudingsovereenkomsten.',
+                'discretion-p2': 'Elke interactie is veilig, elk verzoek wordt behandeld met de grootste vertrouwelijkheid. Uw gemoedsrust en reputatie zijn in deskundige handen.',
+                'discretion-p3': 'Onze beveiligingsprotocollen garanderen dat uw persoonlijke informatie strikt privé blijft, zodat u ten volle kunt genieten van onze diensten.',
+                'contact-title': 'Uw bevoorrechte toegang',
+                'contact-intro': 'Ons toegewijde team staat 24/7 tot uw beschikking om al uw verzoeken met de grootste vertrouwelijkheid te beantwoorden.',
+                'form-name': 'Naam',
+                'form-email': 'E-mail',
+                'form-phone': 'Telefoon',
+                'form-message': 'Uw privébericht',
+                'btn-submit': 'Mijn privéverzoek verzenden',
+                'contact-email': 'Privé e-mail',
+                'contact-whatsapp': 'VIP WhatsApp',
+                'footer-legal': 'Juridische kennisgeving',
+                'footer-privacy': 'Privacy',
+                'footer-terms': 'Voorwaarden'
+            }
+        };
+
+        // Language flags mapping
+        const languageFlags = {
+            fr: '🇫🇷',
+            en: '🇬🇧',
+            es: '🇪🇸',
+            de: '🇩🇪',
+            it: '🇮🇹',
+            ru: '🇷🇺',
+            ar: '🇸🇦',
+            nl: '🇳🇱'
+        };
+
+        // Current language
+        let currentLanguage = 'fr';
+
+        // Function to change language
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update flag and language code in button
+            document.getElementById('current-flag').textContent = languageFlags[lang];
+            document.getElementById('current-lang').textContent = lang.toUpperCase();
+            
+            // Update active state in dropdown
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            document.querySelector(`[onclick="changeLanguage('${lang}')"]`).classList.add('active');
+            
+            // Translate all elements
+            translatePage(lang);
+            
+            // Update document language
+            document.documentElement.lang = lang;
+            
+            // Update page title
+            const titles = {
+                fr: 'Conciergerie de Luxe - Costa del Sol',
+                en: 'Luxury Concierge - Costa del Sol',
+                es: 'Conserjería de Lujo - Costa del Sol',
+                de: 'Luxus Concierge - Costa del Sol',
+                it: 'Concierge di Lusso - Costa del Sol',
+                ru: 'Люксовый Консьерж - Коста-дель-Соль',
+                ar: 'خدمة الكونسيرج الفاخرة - كوستا ديل سول',
+                nl: 'Luxe Conciërge - Costa del Sol'
+            };
+            document.title = titles[lang];
+        }
+
+        // Function to translate the page
+        function translatePage(lang) {
+            const langData = translations[lang];
+            if (!langData) return;
+
+            // Translate elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (langData[key]) {
+                    element.textContent = langData[key];
+                }
+            });
+
+            // Translate placeholders
+            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (langData[key]) {
+                    element.placeholder = langData[key];
+                }
+            });
+
+            // Handle RTL for Arabic
+            if (lang === 'ar') {
+                document.body.style.direction = 'rtl';
+                document.body.style.textAlign = 'right';
+            } else {
+                document.body.style.direction = 'ltr';
+                document.body.style.textAlign = 'left';
+            }
+        }
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message based on current language
+            const successMessages = {
+                fr: 'Merci pour votre message. Notre équipe vous contactera dans les plus brefs délais.',
+                en: 'Thank you for your message. Our team will contact you as soon as possible.',
+                es: 'Gracias por su mensaje. Nuestro equipo se pondrá en contacto con usted lo antes posible.',
+                de: 'Vielen Dank für Ihre Nachricht. Unser Team wird Sie so schnell wie möglich kontaktieren.',
+                it: 'Grazie per il vostro messaggio. Il nostro team vi contatterà il prima possibile.',
+                ru: 'Спасибо за ваше сообщение. Наша команда свяжется с вами как можно скорее.',
+                ar: 'شكراً لرسالتكم. فريقنا سيتواصل معكم في أقرب وقت ممكن.',
+                nl: 'Dank u voor uw bericht. Ons team zal zo snel mogelijk contact met u opnemen.'
+            };
+            
+            alert(successMessages[currentLanguage]);
+            event.target.reset();
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            translatePage(currentLanguage);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c81e9700cb6659',t:'MTc1NzQzNTk0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
