@@ -418,6 +418,276 @@
             color: var(--noir-profond);
         }
 
+        /* Private Experiences Section */
+        .private-experiences {
+            padding: 8rem 3rem;
+            background: linear-gradient(135deg, var(--noir-profond) 0%, #1a1a1a 50%, var(--noir-profond) 100%);
+            color: var(--blanc-pur);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .private-experiences::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(201, 169, 97, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .experiences-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .private-experiences .section-title {
+            color: var(--blanc-pur);
+            margin-bottom: 1rem;
+        }
+
+        .experiences-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--dore-discret);
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .experiences-intro {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experiences-intro p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .experience-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--dore-discret);
+            box-shadow: 0 20px 40px rgba(201, 169, 97, 0.2);
+        }
+
+        .experience-card:hover::before {
+            left: 100%;
+        }
+
+        .experience-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--dore-discret), var(--dore-riche));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--noir-profond);
+        }
+
+        .experience-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .experience-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--blanc-pur);
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .experience-card > p {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-destinations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .destination-tag {
+            background: rgba(201, 169, 97, 0.2);
+            color: var(--dore-discret);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .destination-tag:hover {
+            background: rgba(201, 169, 97, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .experience-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            font-weight: 300;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-item:hover {
+            color: var(--dore-discret);
+        }
+
+        .feature-icon {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .experiences-cta {
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.1), rgba(201, 169, 97, 0.05));
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--blanc-pur);
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-experience-primary {
+            background: linear-gradient(135deg, var(--dore-discret), var(--dore-riche));
+            color: var(--noir-profond);
+            padding: 1rem 2rem;
+            border: 2px solid var(--dore-discret);
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            min-width: 200px;
+        }
+
+        .btn-experience-primary:hover {
+            background: transparent;
+            color: var(--dore-discret);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 169, 97, 0.3);
+        }
+
+        .btn-experience-secondary {
+            background: transparent;
+            color: var(--blanc-pur);
+            padding: 1rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            min-width: 200px;
+        }
+
+        .btn-experience-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--blanc-pur);
+            transform: translateY(-2px);
+        }
+
+        .cta-badge {
+            position: absolute;
+            top: -15px;
+            right: 2rem;
+            background: var(--dore-discret);
+            color: var(--noir-profond);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         /* Premium Plans Section */
         .premium-plans {
             padding: 8rem 3rem;
@@ -1034,6 +1304,28 @@
             .plan-card.featured:hover {
                 transform: translateY(-8px);
             }
+
+            .experiences-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-experience-primary,
+            .btn-experience-secondary {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .cta-badge {
+                position: static;
+                display: inline-block;
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
@@ -1166,6 +1458,21 @@
                         <a href="#" class="btn-details" data-translate="btn-details">Plus de détails</a>
                     </div>
                 </div>
+
+                <div class="service-item">
+                    <svg class="service-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM12 13.5l3.5-2.5v5l-3.5 2.5-3.5-2.5v-5l3.5 2.5z"/>
+                    </svg>
+                    <h3 data-translate="service-6-title">Gestion patrimoniale & investissements</h3>
+                    <p data-translate="service-6-desc">Optimisez et protégez votre patrimoine avec nos experts financiers. Gestion d'investissements immobiliers de prestige, conseils fiscaux internationaux, structuration patrimoniale sur mesure.</p>
+                    <div class="service-details" data-translate="service-6-details">
+                        Conseillers patrimoniaux • Investissements immobiliers • Optimisation fiscale • Gestion de fortune
+                    </div>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-reserve" data-translate="btn-reserve">Réserver maintenant</a>
+                        <a href="#" class="btn-details" data-translate="btn-details">Plus de détails</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1201,6 +1508,124 @@
                         <h4 data-translate="gallery-4-title">Événements privés</h4>
                         <p data-translate="gallery-4-desc">Soirées sur mesure dans des lieux d'exception. Organisation complète, invités prestigieux et moments magiques créés spécialement pour vous.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Concierge Experiences Section -->
+    <section class="private-experiences">
+        <div class="container">
+            <div class="experiences-header">
+                <h2 class="section-title serif" data-translate="experiences-title">Private Concierge Experiences</h2>
+                <p class="experiences-subtitle" data-translate="experiences-subtitle">Expériences sur mesure</p>
+                <div class="experiences-intro">
+                    <p data-translate="experiences-intro">Laissez-nous orchestrer des moments d'exception qui dépassent vos attentes. Chaque expérience est conçue exclusivement pour vous, avec une attention méticuleuse aux détails et un service irréprochable disponible 24h/7j.</p>
+                </div>
+            </div>
+
+            <div class="experiences-grid">
+                <!-- Travel & Escapes -->
+                <div class="experience-card travel-card">
+                    <div class="experience-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="exp-travel-title">Voyages & Escapades sur Mesure</h3>
+                    <p data-translate="exp-travel-desc">Évadez-vous vers des destinations d'exception avec nos itinéraires personnalisés.</p>
+                    <div class="experience-destinations">
+                        <span class="destination-tag" data-translate="dest-baleares">Baléares</span>
+                        <span class="destination-tag" data-translate="dest-marrakech">Marrakech</span>
+                        <span class="destination-tag" data-translate="dest-dubai">Dubaï</span>
+                        <span class="destination-tag" data-translate="dest-alpes">Alpes</span>
+                    </div>
+                    <div class="experience-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✈️</span>
+                            <span data-translate="travel-feature-1">Jets privés & hébergements d'exception</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🏔️</span>
+                            <span data-translate="travel-feature-2">Ski VIP dans les Alpes suisses</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🏖️</span>
+                            <span data-translate="travel-feature-3">Villas privées aux Baléares</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unique Experiences -->
+                <div class="experience-card unique-card">
+                    <div class="experience-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="exp-unique-title">Expériences Uniques & Exclusives</h3>
+                    <p data-translate="exp-unique-desc">Accédez à l'inaccessible avec nos expériences sur-mesure d'exception.</p>
+                    <div class="experience-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">👨‍🍳</span>
+                            <span data-translate="unique-feature-1">Dîners privés avec chefs étoilés</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🍷</span>
+                            <span data-translate="unique-feature-2">Visites privées de vignobles d'exception</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎨</span>
+                            <span data-translate="unique-feature-3">Rencontres exclusives avec artistes</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🚁</span>
+                            <span data-translate="unique-feature-4">Survols en hélicoptère privé</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Complete Management -->
+                <div class="experience-card management-card">
+                    <div class="experience-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="exp-management-title">Gestion Complète & Sans Souci</h3>
+                    <p data-translate="exp-management-desc">Profitez pleinement pendant que nous nous occupons de chaque détail.</p>
+                    <div class="experience-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">📋</span>
+                            <span data-translate="mgmt-feature-1">Planification intégrale de A à Z</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🕐</span>
+                            <span data-translate="mgmt-feature-2">Disponibilité 24h/7j pour urgences</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <span data-translate="mgmt-feature-3">Coordination logistique parfaite</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💎</span>
+                            <span data-translate="mgmt-feature-4">Service premium garanti</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experiences-cta">
+                <div class="cta-content">
+                    <h3 data-translate="cta-title">Prêt pour une expérience d'exception ?</h3>
+                    <p data-translate="cta-subtitle">Notre équipe dédiée vous accompagne dans la création de moments inoubliables</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn-experience-primary" data-translate="btn-experience">Réservez votre expérience</a>
+                        <a href="#contact" class="btn-experience-secondary" data-translate="btn-vip-contact">Contact VIP</a>
+                    </div>
+                </div>
+                <div class="cta-badge">
+                    <span data-translate="availability-badge">Disponible 24h/7j</span>
                 </div>
             </div>
         </div>
@@ -1429,6 +1854,9 @@
                 'service-5-title': 'Sécurité & personnel',
                 'service-5-desc': 'Votre tranquillité d\'esprit est inestimable. Personnel de maison triés sur le volet, protection rapprochée discrète, systèmes de sécurité de pointe.',
                 'service-5-details': 'Nounous multilingues • Sécurité 24/7 • Écoles internationales • Personnel de confiance',
+                'service-6-title': 'Gestion patrimoniale & investissements',
+                'service-6-desc': 'Optimisez et protégez votre patrimoine avec nos experts financiers. Gestion d\'investissements immobiliers de prestige, conseils fiscaux internationaux, structuration patrimoniale sur mesure.',
+                'service-6-details': 'Conseillers patrimoniaux • Investissements immobiliers • Optimisation fiscale • Gestion de fortune',
                 'btn-reserve': 'Réserver maintenant',
                 'btn-details': 'Plus de détails',
                 'lifestyle-title': 'Des instants uniques, taillés sur mesure',
@@ -1509,7 +1937,36 @@
                 'btn-plan': 'Demander cette formule',
                 'btn-vip': 'Contact VIP',
                 'plans-footer-text': 'Tous nos abonnements incluent une période d\'essai de 30 jours et peuvent être personnalisés selon vos besoins spécifiques.',
-                'btn-plans-contact': 'Consultation personnalisée gratuite'
+                'btn-plans-contact': 'Consultation personnalisée gratuite',
+                'experiences-title': 'Private Concierge Experiences',
+                'experiences-subtitle': 'Expériences sur mesure',
+                'experiences-intro': 'Laissez-nous orchestrer des moments d\'exception qui dépassent vos attentes. Chaque expérience est conçue exclusivement pour vous, avec une attention méticuleuse aux détails et un service irréprochable disponible 24h/7j.',
+                'exp-travel-title': 'Voyages & Escapades sur Mesure',
+                'exp-travel-desc': 'Évadez-vous vers des destinations d\'exception avec nos itinéraires personnalisés.',
+                'dest-baleares': 'Baléares',
+                'dest-marrakech': 'Marrakech',
+                'dest-dubai': 'Dubaï',
+                'dest-alpes': 'Alpes',
+                'travel-feature-1': 'Jets privés & hébergements d\'exception',
+                'travel-feature-2': 'Ski VIP dans les Alpes suisses',
+                'travel-feature-3': 'Villas privées aux Baléares',
+                'exp-unique-title': 'Expériences Uniques & Exclusives',
+                'exp-unique-desc': 'Accédez à l\'inaccessible avec nos expériences sur-mesure d\'exception.',
+                'unique-feature-1': 'Dîners privés avec chefs étoilés',
+                'unique-feature-2': 'Visites privées de vignobles d\'exception',
+                'unique-feature-3': 'Rencontres exclusives avec artistes',
+                'unique-feature-4': 'Survols en hélicoptère privé',
+                'exp-management-title': 'Gestion Complète & Sans Souci',
+                'exp-management-desc': 'Profitez pleinement pendant que nous nous occupons de chaque détail.',
+                'mgmt-feature-1': 'Planification intégrale de A à Z',
+                'mgmt-feature-2': 'Disponibilité 24h/7j pour urgences',
+                'mgmt-feature-3': 'Coordination logistique parfaite',
+                'mgmt-feature-4': 'Service premium garanti',
+                'cta-title': 'Prêt pour une expérience d\'exception ?',
+                'cta-subtitle': 'Notre équipe dédiée vous accompagne dans la création de moments inoubliables',
+                'btn-experience': 'Réservez votre expérience',
+                'btn-vip-contact': 'Contact VIP',
+                'availability-badge': 'Disponible 24h/7j'
             },
             en: {
                 'nav-services': 'Services',
@@ -1537,6 +1994,9 @@
                 'service-5-title': 'Security & Staff',
                 'service-5-desc': 'Your peace of mind is invaluable. Carefully selected household staff, discreet close protection, state-of-the-art security systems.',
                 'service-5-details': 'Multilingual nannies • 24/7 security • International schools • Trusted staff',
+                'service-6-title': 'Wealth Management & Investments',
+                'service-6-desc': 'Optimize and protect your wealth with our financial experts. Prestige real estate investment management, international tax advice, bespoke wealth structuring.',
+                'service-6-details': 'Wealth advisors • Real estate investments • Tax optimization • Fortune management',
                 'btn-reserve': 'Book Now',
                 'btn-details': 'More Details',
                 'lifestyle-title': 'Unique moments, tailored for you',
@@ -1593,6 +2053,9 @@
                 'service-5-title': 'Seguridad y personal',
                 'service-5-desc': 'Su tranquilidad es invaluable. Personal doméstico cuidadosamente seleccionado, protección cercana discreta, sistemas de seguridad de vanguardia.',
                 'service-5-details': 'Niñeras multilingües • Seguridad 24/7 • Colegios internacionales • Personal de confianza',
+                'service-6-title': 'Gestión patrimonial e inversiones',
+                'service-6-desc': 'Optimice y proteja su patrimonio con nuestros expertos financieros. Gestión de inversiones inmobiliarias de prestigio, asesoramiento fiscal internacional, estructuración patrimonial a medida.',
+                'service-6-details': 'Asesores patrimoniales • Inversiones inmobiliarias • Optimización fiscal • Gestión de fortunas',
                 'btn-reserve': 'Reservar ahora',
                 'btn-details': 'Más detalles',
                 'lifestyle-title': 'Momentos únicos, hechos a medida',
@@ -1649,6 +2112,9 @@
                 'service-5-title': 'Sicherheit & Personal',
                 'service-5-desc': 'Ihr Seelenfrieden ist unbezahlbar. Sorgfältig ausgewähltes Hauspersonal, diskrete Personenschutz, hochmoderne Sicherheitssysteme.',
                 'service-5-details': 'Mehrsprachige Kindermädchen • 24/7 Sicherheit • Internationale Schulen • Vertrauensvolles Personal',
+                'service-6-title': 'Vermögensverwaltung & Investitionen',
+                'service-6-desc': 'Optimieren und schützen Sie Ihr Vermögen mit unseren Finanzexperten. Verwaltung von Prestige-Immobilieninvestitionen, internationale Steuerberatung, maßgeschneiderte Vermögensstrukturierung.',
+                'service-6-details': 'Vermögensberater • Immobilieninvestitionen • Steueroptimierung • Vermögensverwaltung',
                 'btn-reserve': 'Jetzt buchen',
                 'btn-details': 'Mehr Details',
                 'lifestyle-title': 'Einzigartige Momente, maßgeschneidert',
@@ -1705,6 +2171,9 @@
                 'service-5-title': 'Sicurezza e personale',
                 'service-5-desc': 'La vostra tranquillità è inestimabile. Personale domestico accuratamente selezionato, protezione ravvicinata discreta, sistemi di sicurezza all\'avanguardia.',
                 'service-5-details': 'Tate multilingue • Sicurezza 24/7 • Scuole internazionali • Personale di fiducia',
+                'service-6-title': 'Gestione patrimoniale e investimenti',
+                'service-6-desc': 'Ottimizzate e proteggete il vostro patrimonio con i nostri esperti finanziari. Gestione di investimenti immobiliari di prestigio, consulenza fiscale internazionale, strutturazione patrimoniale su misura.',
+                'service-6-details': 'Consulenti patrimoniali • Investimenti immobiliari • Ottimizzazione fiscale • Gestione patrimoni',
                 'btn-reserve': 'Prenota ora',
                 'btn-details': 'Più dettagli',
                 'lifestyle-title': 'Momenti unici, su misura',
@@ -1761,6 +2230,9 @@
                 'service-5-title': 'Безопасность и персонал',
                 'service-5-desc': 'Ваше спокойствие бесценно. Тщательно отобранный домашний персонал, дискретная личная охрана, передовые системы безопасности.',
                 'service-5-details': 'Многоязычные няни • Безопасность 24/7 • Международные школы • Доверенный персонал',
+                'service-6-title': 'Управление активами и инвестиции',
+                'service-6-desc': 'Оптимизируйте и защитите ваше состояние с нашими финансовыми экспертами. Управление престижными инвестициями в недвижимость, международное налоговое консультирование, индивидуальное структурирование активов.',
+                'service-6-details': 'Консультанты по активам • Инвестиции в недвижимость • Налоговая оптимизация • Управление состоянием',
                 'btn-reserve': 'Забронировать сейчас',
                 'btn-details': 'Подробнее',
                 'lifestyle-title': 'Уникальные моменты, созданные для вас',
@@ -1817,6 +2289,9 @@
                 'service-5-title': 'الأمن والموظفين',
                 'service-5-desc': 'راحة بالكم لا تقدر بثمن. موظفين منزليين مختارين بعناية، حماية شخصية سرية، أنظمة أمان متطورة.',
                 'service-5-details': 'مربيات متعددات اللغات • أمن 24/7 • مدارس دولية • موظفين موثوقين',
+                'service-6-title': 'إدارة الثروات والاستثمارات',
+                'service-6-desc': 'حسّنوا واحموا ثروتكم مع خبرائنا الماليين. إدارة الاستثمارات العقارية المرموقة، الاستشارات الضريبية الدولية، هيكلة الثروات المخصصة.',
+                'service-6-details': 'مستشارو الثروات • الاستثمارات العقارية • التحسين الضريبي • إدارة الثروات',
                 'btn-reserve': 'احجز الآن',
                 'btn-details': 'المزيد من التفاصيل',
                 'lifestyle-title': 'لحظات فريدة، مصممة خصيصاً لكم',
@@ -1873,6 +2348,9 @@
                 'service-5-title': 'Veiligheid & personeel',
                 'service-5-desc': 'Uw gemoedsrust is van onschatbare waarde. Zorgvuldig geselecteerd huispersoneel, discrete persoonlijke beveiliging, geavanceerde beveiligingssystemen.',
                 'service-5-details': 'Meertalige kinderjuffrouwen • 24/7 beveiliging • Internationale scholen • Vertrouwd personeel',
+                'service-6-title': 'Vermogensbeheer & investeringen',
+                'service-6-desc': 'Optimaliseer en bescherm uw vermogen met onze financiële experts. Beheer van prestigieuze vastgoedinvesteringen, internationale belastingadvies, op maat gemaakte vermogensstructurering.',
+                'service-6-details': 'Vermogensadviseurs • Vastgoedinvesteringen • Belastingoptimalisatie • Vermogensbeheer',
                 'btn-reserve': 'Nu boeken',
                 'btn-details': 'Meer details',
                 'lifestyle-title': 'Unieke momenten, op maat gemaakt',
@@ -2043,5 +2521,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c735a7b0c6d58e',t:'MTc1NzQyNjQwMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c74b9b2182ecad',t:'MTc1NzQyNzMwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
