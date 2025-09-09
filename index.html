@@ -103,11 +103,80 @@
             transform: translateY(-1px);
         }
 
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-btn {
+            background: transparent;
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            color: var(--blanc-pur);
+            padding: 0.5rem 1rem;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            border-color: var(--dore-discret);
+            color: var(--dore-discret);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            border-radius: 2px;
+            min-width: 150px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .language-selector:hover .language-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-option {
+            display: block;
+            padding: 0.7rem 1rem;
+            color: var(--blanc-pur);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .language-option:last-child {
+            border-bottom: none;
+        }
+
+        .language-option:hover {
+            background: rgba(201, 169, 97, 0.1);
+            color: var(--dore-discret);
+        }
+
+        .language-option.active {
+            background: rgba(201, 169, 97, 0.2);
+            color: var(--dore-discret);
+        }
+
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="sunset" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23C9A961"/><stop offset="50%" style="stop-color:%23F4E4BC"/><stop offset="100%" style="stop-color:%23FFE5B4"/></linearGradient><linearGradient id="water" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23001B3D"/><stop offset="100%" style="stop-color:%23003366"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23water)"/><circle cx="950" cy="180" r="90" fill="url(%23sunset)" opacity="0.8"/><polygon points="0,580 300,570 600,575 900,565 1200,570 1200,800 0,800" fill="%23001122"/><rect x="80" y="380" width="400" height="220" fill="%23FFFFFF" opacity="0.95"/><rect x="100" y="400" width="360" height="180" fill="%23F8F8F8"/><polygon points="80,380 280,320 480,380" fill="%23E8E8E8"/><rect x="500" y="450" width="200" height="150" fill="%23FFFFFF" opacity="0.9"/><polygon points="500,450 600,400 700,450" fill="%23F0F0F0"/></svg>');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('http://googleusercontent.com/image_generation_content/0');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -366,10 +435,10 @@
             transform: translateY(0);
         }
 
-        .gallery-bg-1 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23001122"/><path d="M50 200 Q200 150 350 200 L350 250 L50 250 Z" fill="%23FFFFFF"/><circle cx="300" cy="180" r="15" fill="%23FFD700"/></svg>') center/cover; }
-        .gallery-bg-2 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23228B22"/><circle cx="100" cy="200" r="8" fill="%23FFFFFF"/><rect x="150" y="180" width="20" height="40" fill="%238B4513"/></svg>') center/cover; }
-        .gallery-bg-3 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23800020"/><circle cx="200" cy="125" r="30" fill="%23FFD700"/><rect x="150" y="180" width="100" height="50" fill="%23FFFFFF" opacity="0.9"/></svg>') center/cover; }
-        .gallery-bg-4 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23654321"/><circle cx="100" cy="100" r="20" fill="%23FFFFFF"/><circle cx="300" cy="150" r="15" fill="%23FFFFFF"/></svg>') center/cover; }
+        .gallery-bg-1 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://googleusercontent.com/image_generation_content/1') center/cover; }
+        .gallery-bg-2 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://googleusercontent.com/image_generation_content/2') center/cover; }
+        .gallery-bg-3 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://googleusercontent.com/image_generation_content/3') center/cover; }
+        .gallery-bg-4 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://googleusercontent.com/image_generation_content/4') center/cover; }
 
         /* Discretion Section */
         .discretion {
@@ -648,28 +717,46 @@
         <nav class="nav-container">
             <a href="#" class="logo">Prestige Concierge</a>
             <ul class="nav-menu">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#lifestyle">Lifestyle</a></li>
-                <li><a href="#discretion">Discrétion</a></li>
-                <li><a href="#contact">Contact privé</a></li>
+                <li><a href="#services" data-translate="nav-services">Services</a></li>
+                <li><a href="#lifestyle" data-translate="nav-lifestyle">Lifestyle</a></li>
+                <li><a href="#discretion" data-translate="nav-discretion">Discrétion</a></li>
+                <li><a href="#contact" data-translate="nav-contact">Contact privé</a></li>
             </ul>
-            <a href="#contact" class="btn-contact-header">Contact privé</a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="language-selector">
+                    <button class="language-btn">
+                        <span id="current-flag">🇫🇷</span>
+                        <span id="current-lang">FR</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="#" class="language-option active" onclick="changeLanguage('fr')">🇫🇷 Français</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('en')">🇬🇧 English</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('es')">🇪🇸 Español</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('de')">🇩🇪 Deutsch</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('it')">🇮🇹 Italiano</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('ru')">🇷🇺 Русский</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('ar')">🇸🇦 العربية</a>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-contact-header" data-translate="btn-contact">Contact privé</a>
+            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="serif">Votre vie, sublimée.</h1>
-            <p>Conciergerie de luxe sur la Costa del Sol</p>
-            <a href="#contact" class="btn-hero">Contact privé</a>
+            <h1 class="serif" data-translate="hero-title">Votre vie, sublimée.</h1>
+            <p data-translate="hero-subtitle">Conciergerie de luxe sur la Costa del Sol</p>
+            <a href="#contact" class="btn-hero" data-translate="hero-btn">Contact privé</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title serif">Nos Services Exclusifs</h2>
+            <h2 class="section-title serif" data-translate="services-title">Nos Services Exclusifs</h2>
             <div class="section-intro">
                 <p>Notre conciergerie de luxe vous offre un accès privilégié à un monde d'expériences exceptionnelles. Chaque service est conçu sur mesure pour répondre à vos exigences les plus raffinées, avec une attention méticuleuse aux détails et un engagement absolu envers l'excellence.</p>
             </div>
@@ -716,7 +803,7 @@
     <!-- Lifestyle Section -->
     <section id="lifestyle" class="lifestyle">
         <div class="container">
-            <h2 class="section-title serif">Des instants uniques, taillés sur mesure</h2>
+            <h2 class="section-title serif" data-translate="lifestyle-title">Des instants uniques, taillés sur mesure</h2>
             <div class="section-intro">
                 <p>La Costa del Sol devient votre terrain de jeu exclusif. Découvrez un art de vivre raffiné où chaque moment est orchestré pour créer des souvenirs inoubliables. De la gastronomie d'exception aux loisirs les plus prestigieux, nous transformons vos désirs en réalité.</p>
             </div>
@@ -753,7 +840,7 @@
     <section id="discretion" class="discretion">
         <div class="container">
             <div class="discretion-content">
-                <h2 class="section-title serif">Confidentialité & Discrétion</h2>
+                <h2 class="section-title serif" data-translate="discretion-title">Confidentialité & Discrétion</h2>
                 <svg class="discretion-icon" viewBox="0 0 24 24">
                     <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
                 </svg>
@@ -768,7 +855,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
-                <h2 class="section-title serif">Votre accès privilégié</h2>
+                <h2 class="section-title serif" data-translate="contact-title">Votre accès privilégié</h2>
                 <p class="contact-intro">Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité. Chaque échange est personnalisé et adapté à vos exigences spécifiques.</p>
                 <p class="contact-intro">Que ce soit pour une demande urgente ou la planification d'un projet d'envergure, nous nous engageons à vous offrir une réponse rapide et des solutions sur mesure.</p>
                 
@@ -813,6 +900,153 @@
     </footer>
 
     <script>
+        // Translations object
+        const translations = {
+            fr: {
+                'nav-services': 'Services',
+                'nav-lifestyle': 'Lifestyle',
+                'nav-discretion': 'Discrétion',
+                'nav-contact': 'Contact privé',
+                'btn-contact': 'Contact privé',
+                'hero-title': 'Votre vie, sublimée.',
+                'hero-subtitle': 'Conciergerie de luxe sur la Costa del Sol',
+                'hero-btn': 'Contact privé',
+                'services-title': 'Nos Services Exclusifs',
+                'lifestyle-title': 'Des instants uniques, taillés sur mesure',
+                'discretion-title': 'Confidentialité & Discrétion',
+                'contact-title': 'Votre accès privilégié'
+            },
+            en: {
+                'nav-services': 'Services',
+                'nav-lifestyle': 'Lifestyle',
+                'nav-discretion': 'Privacy',
+                'nav-contact': 'Private Contact',
+                'btn-contact': 'Private Contact',
+                'hero-title': 'Your life, elevated.',
+                'hero-subtitle': 'Luxury concierge on the Costa del Sol',
+                'hero-btn': 'Private Contact',
+                'services-title': 'Our Exclusive Services',
+                'lifestyle-title': 'Unique moments, tailored for you',
+                'discretion-title': 'Confidentiality & Discretion',
+                'contact-title': 'Your privileged access'
+            },
+            es: {
+                'nav-services': 'Servicios',
+                'nav-lifestyle': 'Estilo de vida',
+                'nav-discretion': 'Discreción',
+                'nav-contact': 'Contacto privado',
+                'btn-contact': 'Contacto privado',
+                'hero-title': 'Su vida, sublimada.',
+                'hero-subtitle': 'Conserjería de lujo en la Costa del Sol',
+                'hero-btn': 'Contacto privado',
+                'services-title': 'Nuestros Servicios Exclusivos',
+                'lifestyle-title': 'Momentos únicos, hechos a medida',
+                'discretion-title': 'Confidencialidad y Discreción',
+                'contact-title': 'Su acceso privilegiado'
+            },
+            de: {
+                'nav-services': 'Services',
+                'nav-lifestyle': 'Lifestyle',
+                'nav-discretion': 'Diskretion',
+                'nav-contact': 'Privater Kontakt',
+                'btn-contact': 'Privater Kontakt',
+                'hero-title': 'Ihr Leben, veredelt.',
+                'hero-subtitle': 'Luxus-Concierge an der Costa del Sol',
+                'hero-btn': 'Privater Kontakt',
+                'services-title': 'Unsere Exklusiven Services',
+                'lifestyle-title': 'Einzigartige Momente, maßgeschneidert',
+                'discretion-title': 'Vertraulichkeit & Diskretion',
+                'contact-title': 'Ihr privilegierter Zugang'
+            },
+            it: {
+                'nav-services': 'Servizi',
+                'nav-lifestyle': 'Lifestyle',
+                'nav-discretion': 'Riservatezza',
+                'nav-contact': 'Contatto privato',
+                'btn-contact': 'Contatto privato',
+                'hero-title': 'La vostra vita, sublimata.',
+                'hero-subtitle': 'Concierge di lusso sulla Costa del Sol',
+                'hero-btn': 'Contatto privato',
+                'services-title': 'I Nostri Servizi Esclusivi',
+                'lifestyle-title': 'Momenti unici, su misura',
+                'discretion-title': 'Riservatezza e Discrezione',
+                'contact-title': 'Il vostro accesso privilegiato'
+            },
+            ru: {
+                'nav-services': 'Услуги',
+                'nav-lifestyle': 'Образ жизни',
+                'nav-discretion': 'Конфиденциальность',
+                'nav-contact': 'Частный контакт',
+                'btn-contact': 'Частный контакт',
+                'hero-title': 'Ваша жизнь, возвышенная.',
+                'hero-subtitle': 'Люксовый консьерж на Коста-дель-Соль',
+                'hero-btn': 'Частный контакт',
+                'services-title': 'Наши Эксклюзивные Услуги',
+                'lifestyle-title': 'Уникальные моменты, созданные для вас',
+                'discretion-title': 'Конфиденциальность и Дискретность',
+                'contact-title': 'Ваш привилегированный доступ'
+            },
+            ar: {
+                'nav-services': 'الخدمات',
+                'nav-lifestyle': 'نمط الحياة',
+                'nav-discretion': 'السرية',
+                'nav-contact': 'اتصال خاص',
+                'btn-contact': 'اتصال خاص',
+                'hero-title': 'حياتكم، مُرتقية.',
+                'hero-subtitle': 'خدمة الكونسيرج الفاخرة في كوستا ديل سول',
+                'hero-btn': 'اتصال خاص',
+                'services-title': 'خدماتنا الحصرية',
+                'lifestyle-title': 'لحظات فريدة، مصممة خصيصاً لكم',
+                'discretion-title': 'السرية والكتمان',
+                'contact-title': 'وصولكم المميز'
+            }
+        };
+
+        const languageFlags = {
+            fr: '🇫🇷',
+            en: '🇬🇧',
+            es: '🇪🇸',
+            de: '🇩🇪',
+            it: '🇮🇹',
+            ru: '🇷🇺',
+            ar: '🇸🇦'
+        };
+
+        let currentLanguage = 'fr';
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update current language display
+            document.getElementById('current-flag').textContent = languageFlags[lang];
+            document.getElementById('current-lang').textContent = lang.toUpperCase();
+            
+            // Update active state in dropdown
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Translate all elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Handle RTL for Arabic
+            if (lang === 'ar') {
+                document.body.style.direction = 'rtl';
+                document.body.style.textAlign = 'right';
+            } else {
+                document.body.style.direction = 'ltr';
+                document.body.style.textAlign = 'left';
+            }
+            
+            event.preventDefault();
+        }
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -897,5 +1131,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c5035955376659',t:'MTc1NzQwMzM3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c53cb1f367d58e',t:'MTc1NzQwNTcxOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
