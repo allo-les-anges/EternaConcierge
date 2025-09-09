@@ -300,19 +300,20 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
             margin-top: 3rem;
         }
 
         .service-item {
-            text-align: center;
-            padding: 3rem 2rem;
+            text-align: left;
+            padding: 3rem 2.5rem;
             transition: all 0.4s ease;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.9);
             border: 1px solid rgba(201, 169, 97, 0.1);
             position: relative;
             overflow: hidden;
+            border-radius: 8px;
         }
 
         .service-item::before {
@@ -339,15 +340,15 @@
         .service-icon {
             width: 60px;
             height: 60px;
-            margin: 0 auto 1.5rem;
+            margin-bottom: 1.5rem;
             fill: var(--dore-discret);
         }
 
         .service-item h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 500;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--noir-profond);
             letter-spacing: 1px;
         }
@@ -356,6 +357,65 @@
             color: #666;
             font-weight: 300;
             line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-details {
+            background: rgba(201, 169, 97, 0.1);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #555;
+            border-left: 3px solid var(--dore-discret);
+        }
+
+        .service-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-reserve {
+            background: var(--dore-discret);
+            color: var(--noir-profond);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+            flex: 1;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .btn-reserve:hover {
+            background: #B8941F;
+            transform: translateY(-2px);
+        }
+
+        .btn-details {
+            background: transparent;
+            color: var(--dore-discret);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--dore-discret);
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+            flex: 1;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .btn-details:hover {
+            background: var(--dore-discret);
+            color: var(--noir-profond);
         }
 
         /* Lifestyle Section */
@@ -390,8 +450,8 @@
 
         .gallery-item {
             position: relative;
-            height: 250px;
-            border-radius: 4px;
+            height: 280px;
+            border-radius: 8px;
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -423,8 +483,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 1.5rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
             color: var(--blanc-pur);
             transform: translateY(100%);
             transition: transform 0.3s ease;
@@ -433,6 +493,13 @@
 
         .gallery-item:hover .gallery-caption {
             transform: translateY(0);
+        }
+
+        .gallery-caption h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--dore-discret);
         }
 
         .gallery-bg-1 { 
@@ -543,7 +610,7 @@
         .contact-form textarea {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(201, 169, 97, 0.3);
-            border-radius: 0;
+            border-radius: 4px;
             padding: 1.2rem 1.5rem;
             color: var(--blanc-pur);
             font-family: 'Inter', sans-serif;
@@ -575,7 +642,7 @@
             color: var(--noir-profond);
             padding: 1rem 2rem;
             border: none;
-            border-radius: 2px;
+            border-radius: 4px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -598,9 +665,10 @@
         }
 
         .contact-item h4 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             color: var(--dore-discret);
             margin-bottom: 0.5rem;
+            font-size: 1.2rem;
         }
 
         /* Footer */
@@ -622,7 +690,7 @@
         }
 
         .footer-logo {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
             color: var(--blanc-pur);
         }
@@ -716,6 +784,10 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .service-actions {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -766,43 +838,82 @@
         <div class="container">
             <h2 class="section-title serif" data-translate="services-title">Nos Services Exclusifs</h2>
             <div class="section-intro">
-                <p>Notre conciergerie de luxe vous offre un accès privilégié à un monde d'expériences exceptionnelles. Chaque service est conçu sur mesure pour répondre à vos exigences les plus raffinées, avec une attention méticuleuse aux détails et un engagement absolu envers l'excellence.</p>
+                <p data-translate="services-intro">Notre conciergerie de luxe vous offre un accès privilégié à un monde d'expériences exceptionnelles. Chaque service est conçu sur mesure pour répondre à vos exigences les plus raffinées, avec une attention méticuleuse aux détails et un engagement absolu envers l'excellence.</p>
             </div>
             <div class="services-grid">
                 <div class="service-item">
                     <svg class="service-icon" viewBox="0 0 24 24">
                         <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.84L18 12v7h-2v-6H8v6H6v-7l6-6.16z"/>
                     </svg>
-                    <h3>Gestion de propriétés</h3>
-                    <p>Confiez-nous la gestion intégrale de vos résidences de prestige. Notre équipe d'experts assure la maintenance préventive, la surveillance 24h/24, l'entretien des jardins et piscines, ainsi que la coordination avec les meilleurs artisans locaux. Votre propriété reste impeccable en votre absence.</p>
+                    <h3 data-translate="service-1-title">Gestion de propriétés</h3>
+                    <p data-translate="service-1-desc">Confiez-nous la gestion intégrale de vos résidences de prestige. Notre équipe d'experts assure la maintenance préventive, la surveillance 24h/24, l'entretien des jardins et piscines.</p>
+                    <div class="service-details" data-translate="service-1-details">
+                        Maintenance complète • Personnel de maison • Préparation avant arrivée • Villa parfumée et garnie
+                    </div>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-reserve" data-translate="btn-reserve">Réserver maintenant</a>
+                        <a href="#" class="btn-details" data-translate="btn-details">Plus de détails</a>
+                    </div>
                 </div>
+                
                 <div class="service-item">
                     <svg class="service-icon" viewBox="0 0 24 24">
                         <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
                     </svg>
-                    <h3>Transport privé</h3>
-                    <p>Voyagez selon vos standards d'excellence. Jets privés pour vos déplacements internationaux, yachts de luxe pour explorer la Méditerranée, véhicules de prestige avec chauffeur privé, et hélicoptères pour vos transferts express. Chaque trajet devient une expérience raffinée.</p>
+                    <h3 data-translate="service-2-title">Transport privé</h3>
+                    <p data-translate="service-2-desc">Voyagez selon vos standards d'excellence. Jets privés pour vos déplacements internationaux, yachts de luxe pour explorer la Méditerranée, véhicules de prestige avec chauffeur privé.</p>
+                    <div class="service-details" data-translate="service-2-details">
+                        Chauffeur Mercedes/Maybach • Supercars Ferrari/Lamborghini • Jets privés • Yachts avec équipage
+                    </div>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-reserve" data-translate="btn-reserve">Réserver maintenant</a>
+                        <a href="#" class="btn-details" data-translate="btn-details">Plus de détails</a>
+                    </div>
                 </div>
+
                 <div class="service-item">
                     <svg class="service-icon" viewBox="0 0 24 24">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
-                    <h3>Expériences exclusives</h3>
-                    <p>Accédez à l'inaccessible. Tables privées dans les restaurants étoilés, loges VIP aux événements culturels et sportifs, soirées privées dans des lieux d'exception, rencontres avec des personnalités, et expériences sur mesure créées uniquement pour vous. L'extraordinaire devient votre quotidien.</p>
+                    <h3 data-translate="service-3-title">Expériences exclusives</h3>
+                    <p data-translate="service-3-desc">Accédez à l'inaccessible. Tables privées dans les restaurants étoilés, loges VIP aux événements culturels et sportifs, soirées privées dans des lieux d'exception.</p>
+                    <div class="service-details" data-translate="service-3-details">
+                        Restaurants Michelin • Clubs privés VIP • Événements exclusifs • Expériences sur mesure
+                    </div>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-reserve" data-translate="btn-reserve">Réserver maintenant</a>
+                        <a href="#" class="btn-details" data-translate="btn-details">Plus de détails</a>
+                    </div>
                 </div>
+
                 <div class="service-item">
                     <svg class="service-icon" viewBox="0 0 24 24">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
-                    <h3>Bien-être & santé</h3>
-                    <p>Votre santé mérite l'excellence. Consultations privées avec les meilleurs spécialistes, programmes de bien-être personnalisés, coachs sportifs et nutritionnistes de renom, spas privatisés, et accès privilégié aux centres médicaux les plus avancés. Votre équilibre est notre priorité.</p>
+                    <h3 data-translate="service-4-title">Bien-être & santé</h3>
+                    <p data-translate="service-4-desc">Votre santé mérite l'excellence. Consultations privées avec les meilleurs spécialistes, programmes de bien-être personnalisés, coachs sportifs et nutritionnistes de renom.</p>
+                    <div class="service-details" data-translate="service-4-details">
+                        Coachs personnels • Spa mobile • Médecins privés • Nutrition personnalisée
+                    </div>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-reserve" data-translate="btn-reserve">Réserver maintenant</a>
+                        <a href="#" class="btn-details" data-translate="btn-details">Plus de détails</a>
+                    </div>
                 </div>
+
                 <div class="service-item">
                     <svg class="service-icon" viewBox="0 0 24 24">
                         <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
                     </svg>
-                    <h3>Sécurité & personnel</h3>
-                    <p>Votre tranquillité d'esprit est inestimable. Personnel de maison triés sur le volet, protection rapprochée discrète, systèmes de sécurité de pointe, et équipes d'intervention 24h/24. Chaque membre de notre réseau est sélectionné pour sa discrétion et son professionnalisme exemplaire.</p>
+                    <h3 data-translate="service-5-title">Sécurité & personnel</h3>
+                    <p data-translate="service-5-desc">Votre tranquillité d'esprit est inestimable. Personnel de maison triés sur le volet, protection rapprochée discrète, systèmes de sécurité de pointe.</p>
+                    <div class="service-details" data-translate="service-5-details">
+                        Nounous multilingues • Sécurité 24/7 • Écoles internationales • Personnel de confiance
+                    </div>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-reserve" data-translate="btn-reserve">Réserver maintenant</a>
+                        <a href="#" class="btn-details" data-translate="btn-details">Plus de détails</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -813,31 +924,31 @@
         <div class="container">
             <h2 class="section-title serif" data-translate="lifestyle-title">Des instants uniques, taillés sur mesure</h2>
             <div class="section-intro">
-                <p>La Costa del Sol devient votre terrain de jeu exclusif. Découvrez un art de vivre raffiné où chaque moment est orchestré pour créer des souvenirs inoubliables. De la gastronomie d'exception aux loisirs les plus prestigieux, nous transformons vos désirs en réalité.</p>
+                <p data-translate="lifestyle-intro">La Costa del Sol devient votre terrain de jeu exclusif. Découvrez un art de vivre raffiné où chaque moment est orchestré pour créer des souvenirs inoubliables.</p>
             </div>
             <div class="gallery">
                 <div class="gallery-item gallery-bg-1">
                     <div class="gallery-caption">
-                        <h4>Yachting de prestige</h4>
-                        <p>Explorez la Méditerranée à bord de yachts d'exception. Équipages expérimentés, itinéraires sur mesure vers les plus belles criques secrètes, et services de conciergerie maritime pour des escapades inoubliables.</p>
+                        <h4 data-translate="gallery-1-title">Yachting de prestige</h4>
+                        <p data-translate="gallery-1-desc">Explorez la Méditerranée à bord de yachts d'exception. Équipages expérimentés, itinéraires sur mesure vers les plus belles criques secrètes.</p>
                     </div>
                 </div>
                 <div class="gallery-item gallery-bg-2">
                     <div class="gallery-caption">
-                        <h4>Golf exclusif</h4>
-                        <p>Parcours légendaires de la Costa del Sol, réservations privilégiées, caddies professionnels et accès aux clubs les plus sélects. Perfectionnez votre jeu dans un cadre d'exception.</p>
+                        <h4 data-translate="gallery-2-title">Golf exclusif</h4>
+                        <p data-translate="gallery-2-desc">Parcours légendaires de la Costa del Sol, réservations privilégiées, caddies professionnels et accès aux clubs les plus sélects.</p>
                     </div>
                 </div>
                 <div class="gallery-item gallery-bg-3">
                     <div class="gallery-caption">
-                        <h4>Gastronomie étoilée</h4>
-                        <p>Savourez l'excellence culinaire dans les restaurants les plus réputés. Chefs privés, dégustations exclusives et tables d'exception pour des expériences gastronomiques uniques.</p>
+                        <h4 data-translate="gallery-3-title">Gastronomie étoilée</h4>
+                        <p data-translate="gallery-3-desc">Savourez l'excellence culinaire dans les restaurants les plus réputés. Chefs privés, dégustations exclusives et tables d'exception.</p>
                     </div>
                 </div>
                 <div class="gallery-item gallery-bg-4">
                     <div class="gallery-caption">
-                        <h4>Événements privés</h4>
-                        <p>Soirées sur mesure dans des lieux d'exception. Organisation complète, invités prestigieux et moments magiques créés spécialement pour vous et vos proches.</p>
+                        <h4 data-translate="gallery-4-title">Événements privés</h4>
+                        <p data-translate="gallery-4-desc">Soirées sur mesure dans des lieux d'exception. Organisation complète, invités prestigieux et moments magiques créés spécialement pour vous.</p>
                     </div>
                 </div>
             </div>
@@ -852,9 +963,9 @@
                 <svg class="discretion-icon" viewBox="0 0 24 24">
                     <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
                 </svg>
-                <p>La discrétion est l'essence même de notre service. Nous opérons avec la plus stricte confidentialité, protégée par des accords de non-divulgation rigoureux. Notre réseau exclusif de partenaires partage nos valeurs d'intégrité et de respect absolu de votre intimité.</p>
-                <p>Chaque interaction est sécurisée, chaque demande traitée avec la plus grande confidentialité. Votre tranquillité d'esprit et votre réputation sont entre des mains expertes et dignes de confiance.</p>
-                <p>Nos protocoles de sécurité garantissent que vos informations personnelles et vos préférences restent strictement privées, vous permettant de profiter pleinement de nos services en toute sérénité.</p>
+                <p data-translate="discretion-p1">La discrétion est l'essence même de notre service. Nous opérons avec la plus stricte confidentialité, protégée par des accords de non-divulgation rigoureux.</p>
+                <p data-translate="discretion-p2">Chaque interaction est sécurisée, chaque demande traitée avec la plus grande confidentialité. Votre tranquillité d'esprit et votre réputation sont entre des mains expertes.</p>
+                <p data-translate="discretion-p3">Nos protocoles de sécurité garantissent que vos informations personnelles restent strictement privées, vous permettant de profiter pleinement de nos services.</p>
             </div>
         </div>
     </section>
@@ -864,26 +975,26 @@
         <div class="container">
             <div class="contact-content">
                 <h2 class="section-title serif" data-translate="contact-title">Votre accès privilégié</h2>
-                <p class="contact-intro">Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité. Chaque échange est personnalisé et adapté à vos exigences spécifiques.</p>
-                <p class="contact-intro">Que ce soit pour une demande urgente ou la planification d'un projet d'envergure, nous nous engageons à vous offrir une réponse rapide et des solutions sur mesure.</p>
+                <p class="contact-intro" data-translate="contact-intro1">Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité.</p>
+                <p class="contact-intro" data-translate="contact-intro2">Que ce soit pour une demande urgente ou la planification d'un projet d'envergure, nous nous engageons à vous offrir une réponse rapide et des solutions sur mesure.</p>
                 
                 <form class="contact-form" onsubmit="handleSubmit(event)">
                     <div class="form-group">
-                        <input type="text" placeholder="Nom" required>
-                        <input type="email" placeholder="Email" required>
+                        <input type="text" data-translate-placeholder="form-name" placeholder="Nom" required>
+                        <input type="email" data-translate-placeholder="form-email" placeholder="Email" required>
                     </div>
-                    <input type="tel" placeholder="Téléphone">
-                    <textarea placeholder="Votre message privé" required></textarea>
-                    <button type="submit" class="btn-submit">Envoyer ma demande privée</button>
+                    <input type="tel" data-translate-placeholder="form-phone" placeholder="Téléphone">
+                    <textarea data-translate-placeholder="form-message" placeholder="Votre message privé" required></textarea>
+                    <button type="submit" class="btn-submit" data-translate="btn-submit">Envoyer ma demande privée</button>
                 </form>
 
                 <div class="contact-info">
                     <div class="contact-item">
-                        <h4>Email privé</h4>
+                        <h4 data-translate="contact-email">Email privé</h4>
                         <p>concierge@prestige-costadelsol.com</p>
                     </div>
                     <div class="contact-item">
-                        <h4>WhatsApp VIP</h4>
+                        <h4 data-translate="contact-whatsapp">WhatsApp VIP</h4>
                         <p>+34 600 000 000</p>
                     </div>
                 </div>
@@ -896,9 +1007,9 @@
         <div class="footer-content">
             <div class="footer-logo serif">Prestige Concierge</div>
             <div class="footer-links">
-                <a href="#">Mentions légales</a>
-                <a href="#">Confidentialité</a>
-                <a href="#">Conditions</a>
+                <a href="#" data-translate="footer-legal">Mentions légales</a>
+                <a href="#" data-translate="footer-privacy">Confidentialité</a>
+                <a href="#" data-translate="footer-terms">Conditions</a>
             </div>
             <div class="social-links">
                 <a href="#" aria-label="Instagram">📷</a>
@@ -908,7 +1019,7 @@
     </footer>
 
     <script>
-        // Translations object
+        // Complete translations object with all content
         const translations = {
             fr: {
                 'nav-services': 'Services',
@@ -920,9 +1031,51 @@
                 'hero-subtitle': 'Conciergerie de luxe sur la Costa del Sol',
                 'hero-btn': 'Contact privé',
                 'services-title': 'Nos Services Exclusifs',
+                'services-intro': 'Notre conciergerie de luxe vous offre un accès privilégié à un monde d\'expériences exceptionnelles. Chaque service est conçu sur mesure pour répondre à vos exigences les plus raffinées, avec une attention méticuleuse aux détails et un engagement absolu envers l\'excellence.',
+                'service-1-title': 'Gestion de propriétés',
+                'service-1-desc': 'Confiez-nous la gestion intégrale de vos résidences de prestige. Notre équipe d\'experts assure la maintenance préventive, la surveillance 24h/24, l\'entretien des jardins et piscines.',
+                'service-1-details': 'Maintenance complète • Personnel de maison • Préparation avant arrivée • Villa parfumée et garnie',
+                'service-2-title': 'Transport privé',
+                'service-2-desc': 'Voyagez selon vos standards d\'excellence. Jets privés pour vos déplacements internationaux, yachts de luxe pour explorer la Méditerranée, véhicules de prestige avec chauffeur privé.',
+                'service-2-details': 'Chauffeur Mercedes/Maybach • Supercars Ferrari/Lamborghini • Jets privés • Yachts avec équipage',
+                'service-3-title': 'Expériences exclusives',
+                'service-3-desc': 'Accédez à l\'inaccessible. Tables privées dans les restaurants étoilés, loges VIP aux événements culturels et sportifs, soirées privées dans des lieux d\'exception.',
+                'service-3-details': 'Restaurants Michelin • Clubs privés VIP • Événements exclusifs • Expériences sur mesure',
+                'service-4-title': 'Bien-être & santé',
+                'service-4-desc': 'Votre santé mérite l\'excellence. Consultations privées avec les meilleurs spécialistes, programmes de bien-être personnalisés, coachs sportifs et nutritionnistes de renom.',
+                'service-4-details': 'Coachs personnels • Spa mobile • Médecins privés • Nutrition personnalisée',
+                'service-5-title': 'Sécurité & personnel',
+                'service-5-desc': 'Votre tranquillité d\'esprit est inestimable. Personnel de maison triés sur le volet, protection rapprochée discrète, systèmes de sécurité de pointe.',
+                'service-5-details': 'Nounous multilingues • Sécurité 24/7 • Écoles internationales • Personnel de confiance',
+                'btn-reserve': 'Réserver maintenant',
+                'btn-details': 'Plus de détails',
                 'lifestyle-title': 'Des instants uniques, taillés sur mesure',
+                'lifestyle-intro': 'La Costa del Sol devient votre terrain de jeu exclusif. Découvrez un art de vivre raffiné où chaque moment est orchestré pour créer des souvenirs inoubliables.',
+                'gallery-1-title': 'Yachting de prestige',
+                'gallery-1-desc': 'Explorez la Méditerranée à bord de yachts d\'exception. Équipages expérimentés, itinéraires sur mesure vers les plus belles criques secrètes.',
+                'gallery-2-title': 'Golf exclusif',
+                'gallery-2-desc': 'Parcours légendaires de la Costa del Sol, réservations privilégiées, caddies professionnels et accès aux clubs les plus sélects.',
+                'gallery-3-title': 'Gastronomie étoilée',
+                'gallery-3-desc': 'Savourez l\'excellence culinaire dans les restaurants les plus réputés. Chefs privés, dégustations exclusives et tables d\'exception.',
+                'gallery-4-title': 'Événements privés',
+                'gallery-4-desc': 'Soirées sur mesure dans des lieux d\'exception. Organisation complète, invités prestigieux et moments magiques créés spécialement pour vous.',
                 'discretion-title': 'Confidentialité & Discrétion',
-                'contact-title': 'Votre accès privilégié'
+                'discretion-p1': 'La discrétion est l\'essence même de notre service. Nous opérons avec la plus stricte confidentialité, protégée par des accords de non-divulgation rigoureux.',
+                'discretion-p2': 'Chaque interaction est sécurisée, chaque demande traitée avec la plus grande confidentialité. Votre tranquillité d\'esprit et votre réputation sont entre des mains expertes.',
+                'discretion-p3': 'Nos protocoles de sécurité garantissent que vos informations personnelles restent strictement privées, vous permettant de profiter pleinement de nos services.',
+                'contact-title': 'Votre accès privilégié',
+                'contact-intro1': 'Notre équipe dédiée est à votre disposition 24h/24, 7j/7 pour répondre à toutes vos demandes avec la plus grande confidentialité.',
+                'contact-intro2': 'Que ce soit pour une demande urgente ou la planification d\'un projet d\'envergure, nous nous engageons à vous offrir une réponse rapide et des solutions sur mesure.',
+                'form-name': 'Nom',
+                'form-email': 'Email',
+                'form-phone': 'Téléphone',
+                'form-message': 'Votre message privé',
+                'btn-submit': 'Envoyer ma demande privée',
+                'contact-email': 'Email privé',
+                'contact-whatsapp': 'WhatsApp VIP',
+                'footer-legal': 'Mentions légales',
+                'footer-privacy': 'Confidentialité',
+                'footer-terms': 'Conditions'
             },
             en: {
                 'nav-services': 'Services',
@@ -934,9 +1087,51 @@
                 'hero-subtitle': 'Luxury concierge on the Costa del Sol',
                 'hero-btn': 'Private Contact',
                 'services-title': 'Our Exclusive Services',
+                'services-intro': 'Our luxury concierge offers you privileged access to a world of exceptional experiences. Each service is custom-designed to meet your most refined requirements, with meticulous attention to detail and absolute commitment to excellence.',
+                'service-1-title': 'Property Management',
+                'service-1-desc': 'Entrust us with the complete management of your prestigious residences. Our team of experts ensures preventive maintenance, 24/7 surveillance, garden and pool maintenance.',
+                'service-1-details': 'Complete maintenance • Household staff • Pre-arrival preparation • Perfumed and stocked villa',
+                'service-2-title': 'Private Transport',
+                'service-2-desc': 'Travel according to your standards of excellence. Private jets for your international travel, luxury yachts to explore the Mediterranean, prestige vehicles with private chauffeur.',
+                'service-2-details': 'Mercedes/Maybach chauffeur • Ferrari/Lamborghini supercars • Private jets • Yachts with crew',
+                'service-3-title': 'Exclusive Experiences',
+                'service-3-desc': 'Access the inaccessible. Private tables in starred restaurants, VIP boxes at cultural and sporting events, private parties in exceptional venues.',
+                'service-3-details': 'Michelin restaurants • VIP private clubs • Exclusive events • Bespoke experiences',
+                'service-4-title': 'Wellness & Health',
+                'service-4-desc': 'Your health deserves excellence. Private consultations with the best specialists, personalized wellness programs, renowned sports coaches and nutritionists.',
+                'service-4-details': 'Personal coaches • Mobile spa • Private doctors • Personalized nutrition',
+                'service-5-title': 'Security & Staff',
+                'service-5-desc': 'Your peace of mind is invaluable. Carefully selected household staff, discreet close protection, state-of-the-art security systems.',
+                'service-5-details': 'Multilingual nannies • 24/7 security • International schools • Trusted staff',
+                'btn-reserve': 'Book Now',
+                'btn-details': 'More Details',
                 'lifestyle-title': 'Unique moments, tailored for you',
+                'lifestyle-intro': 'The Costa del Sol becomes your exclusive playground. Discover a refined way of life where every moment is orchestrated to create unforgettable memories.',
+                'gallery-1-title': 'Prestige Yachting',
+                'gallery-1-desc': 'Explore the Mediterranean aboard exceptional yachts. Experienced crews, custom itineraries to the most beautiful secret coves.',
+                'gallery-2-title': 'Exclusive Golf',
+                'gallery-2-desc': 'Legendary courses of the Costa del Sol, privileged reservations, professional caddies and access to the most select clubs.',
+                'gallery-3-title': 'Starred Gastronomy',
+                'gallery-3-desc': 'Savor culinary excellence in the most renowned restaurants. Private chefs, exclusive tastings and exceptional tables.',
+                'gallery-4-title': 'Private Events',
+                'gallery-4-desc': 'Bespoke evenings in exceptional venues. Complete organization, prestigious guests and magical moments created especially for you.',
                 'discretion-title': 'Confidentiality & Discretion',
-                'contact-title': 'Your privileged access'
+                'discretion-p1': 'Discretion is the very essence of our service. We operate with the strictest confidentiality, protected by rigorous non-disclosure agreements.',
+                'discretion-p2': 'Every interaction is secure, every request handled with the utmost confidentiality. Your peace of mind and reputation are in expert hands.',
+                'discretion-p3': 'Our security protocols ensure that your personal information remains strictly private, allowing you to fully enjoy our services.',
+                'contact-title': 'Your Privileged Access',
+                'contact-intro1': 'Our dedicated team is at your disposal 24/7 to respond to all your requests with the utmost confidentiality.',
+                'contact-intro2': 'Whether for an urgent request or planning a major project, we are committed to providing you with a quick response and tailor-made solutions.',
+                'form-name': 'Name',
+                'form-email': 'Email',
+                'form-phone': 'Phone',
+                'form-message': 'Your private message',
+                'btn-submit': 'Send my private request',
+                'contact-email': 'Private Email',
+                'contact-whatsapp': 'VIP WhatsApp',
+                'footer-legal': 'Legal Notice',
+                'footer-privacy': 'Privacy',
+                'footer-terms': 'Terms'
             },
             es: {
                 'nav-services': 'Servicios',
@@ -948,9 +1143,51 @@
                 'hero-subtitle': 'Conserjería de lujo en la Costa del Sol',
                 'hero-btn': 'Contacto privado',
                 'services-title': 'Nuestros Servicios Exclusivos',
+                'services-intro': 'Nuestra conserjería de lujo le ofrece acceso privilegiado a un mundo de experiencias excepcionales. Cada servicio está diseñado a medida para satisfacer sus exigencias más refinadas, con atención meticulosa a los detalles y compromiso absoluto con la excelencia.',
+                'service-1-title': 'Gestión de propiedades',
+                'service-1-desc': 'Confíenos la gestión integral de sus residencias de prestigio. Nuestro equipo de expertos asegura el mantenimiento preventivo, vigilancia 24h/24, cuidado de jardines y piscinas.',
+                'service-1-details': 'Mantenimiento completo • Personal doméstico • Preparación antes de llegada • Villa perfumada y abastecida',
+                'service-2-title': 'Transporte privado',
+                'service-2-desc': 'Viaje según sus estándares de excelencia. Jets privados para sus desplazamientos internacionales, yates de lujo para explorar el Mediterráneo, vehículos de prestigio con chófer privado.',
+                'service-2-details': 'Chófer Mercedes/Maybach • Supercoches Ferrari/Lamborghini • Jets privados • Yates con tripulación',
+                'service-3-title': 'Experiencias exclusivas',
+                'service-3-desc': 'Acceda a lo inaccesible. Mesas privadas en restaurantes estrellados, palcos VIP en eventos culturales y deportivos, fiestas privadas en lugares excepcionales.',
+                'service-3-details': 'Restaurantes Michelin • Clubs privados VIP • Eventos exclusivos • Experiencias a medida',
+                'service-4-title': 'Bienestar y salud',
+                'service-4-desc': 'Su salud merece la excelencia. Consultas privadas con los mejores especialistas, programas de bienestar personalizados, entrenadores deportivos y nutricionistas de renombre.',
+                'service-4-details': 'Entrenadores personales • Spa móvil • Médicos privados • Nutrición personalizada',
+                'service-5-title': 'Seguridad y personal',
+                'service-5-desc': 'Su tranquilidad es invaluable. Personal doméstico cuidadosamente seleccionado, protección cercana discreta, sistemas de seguridad de vanguardia.',
+                'service-5-details': 'Niñeras multilingües • Seguridad 24/7 • Colegios internacionales • Personal de confianza',
+                'btn-reserve': 'Reservar ahora',
+                'btn-details': 'Más detalles',
                 'lifestyle-title': 'Momentos únicos, hechos a medida',
+                'lifestyle-intro': 'La Costa del Sol se convierte en su campo de juego exclusivo. Descubra un estilo de vida refinado donde cada momento está orquestado para crear recuerdos inolvidables.',
+                'gallery-1-title': 'Yachting de prestigio',
+                'gallery-1-desc': 'Explore el Mediterráneo a bordo de yates excepcionales. Tripulaciones experimentadas, itinerarios a medida hacia las calas secretas más hermosas.',
+                'gallery-2-title': 'Golf exclusivo',
+                'gallery-2-desc': 'Campos legendarios de la Costa del Sol, reservas privilegiadas, caddies profesionales y acceso a los clubs más selectos.',
+                'gallery-3-title': 'Gastronomía estrellada',
+                'gallery-3-desc': 'Saboree la excelencia culinaria en los restaurantes más reconocidos. Chefs privados, degustaciones exclusivas y mesas excepcionales.',
+                'gallery-4-title': 'Eventos privados',
+                'gallery-4-desc': 'Veladas a medida en lugares excepcionales. Organización completa, invitados prestigiosos y momentos mágicos creados especialmente para usted.',
                 'discretion-title': 'Confidencialidad y Discreción',
-                'contact-title': 'Su acceso privilegiado'
+                'discretion-p1': 'La discreción es la esencia misma de nuestro servicio. Operamos con la más estricta confidencialidad, protegida por rigurosos acuerdos de no divulgación.',
+                'discretion-p2': 'Cada interacción es segura, cada solicitud tratada con la máxima confidencialidad. Su tranquilidad y reputación están en manos expertas.',
+                'discretion-p3': 'Nuestros protocolos de seguridad garantizan que su información personal permanezca estrictamente privada, permitiéndole disfrutar plenamente de nuestros servicios.',
+                'contact-title': 'Su acceso privilegiado',
+                'contact-intro1': 'Nuestro equipo dedicado está a su disposición 24h/24, 7j/7 para responder a todas sus solicitudes con la máxima confidencialidad.',
+                'contact-intro2': 'Ya sea para una solicitud urgente o la planificación de un proyecto de envergadura, nos comprometemos a ofrecerle una respuesta rápida y soluciones a medida.',
+                'form-name': 'Nombre',
+                'form-email': 'Email',
+                'form-phone': 'Teléfono',
+                'form-message': 'Su mensaje privado',
+                'btn-submit': 'Enviar mi solicitud privada',
+                'contact-email': 'Email privado',
+                'contact-whatsapp': 'WhatsApp VIP',
+                'footer-legal': 'Aviso legal',
+                'footer-privacy': 'Privacidad',
+                'footer-terms': 'Condiciones'
             },
             de: {
                 'nav-services': 'Services',
@@ -962,9 +1199,51 @@
                 'hero-subtitle': 'Luxus-Concierge an der Costa del Sol',
                 'hero-btn': 'Privater Kontakt',
                 'services-title': 'Unsere Exklusiven Services',
+                'services-intro': 'Unser Luxus-Concierge bietet Ihnen privilegierten Zugang zu einer Welt außergewöhnlicher Erfahrungen. Jeder Service ist maßgeschneidert, um Ihre raffiniertesten Anforderungen zu erfüllen, mit akribischer Aufmerksamkeit für Details und absolutem Engagement für Exzellenz.',
+                'service-1-title': 'Immobilienverwaltung',
+                'service-1-desc': 'Vertrauen Sie uns die komplette Verwaltung Ihrer prestigeträchtigen Residenzen an. Unser Expertenteam gewährleistet präventive Wartung, 24/7-Überwachung, Garten- und Poolpflege.',
+                'service-1-details': 'Komplette Wartung • Hauspersonal • Vorbereitung vor Ankunft • Parfümierte und bestückte Villa',
+                'service-2-title': 'Privater Transport',
+                'service-2-desc': 'Reisen Sie nach Ihren Exzellenzstandards. Privatjets für Ihre internationalen Reisen, Luxusyachten zur Erkundung des Mittelmeers, Prestigefahrzeuge mit Privatfahrer.',
+                'service-2-details': 'Mercedes/Maybach Chauffeur • Ferrari/Lamborghini Supersportwagen • Privatjets • Yachten mit Crew',
+                'service-3-title': 'Exklusive Erfahrungen',
+                'service-3-desc': 'Zugang zum Unzugänglichen. Private Tische in Sternerestaurants, VIP-Logen bei kulturellen und sportlichen Veranstaltungen, private Partys an außergewöhnlichen Orten.',
+                'service-3-details': 'Michelin-Restaurants • VIP-Privatclubs • Exklusive Events • Maßgeschneiderte Erfahrungen',
+                'service-4-title': 'Wellness & Gesundheit',
+                'service-4-desc': 'Ihre Gesundheit verdient Exzellenz. Private Konsultationen mit den besten Spezialisten, personalisierte Wellness-Programme, renommierte Sporttrainer und Ernährungsberater.',
+                'service-4-details': 'Personal Trainer • Mobile Spa • Privatärzte • Personalisierte Ernährung',
+                'service-5-title': 'Sicherheit & Personal',
+                'service-5-desc': 'Ihr Seelenfrieden ist unbezahlbar. Sorgfältig ausgewähltes Hauspersonal, diskrete Personenschutz, hochmoderne Sicherheitssysteme.',
+                'service-5-details': 'Mehrsprachige Kindermädchen • 24/7 Sicherheit • Internationale Schulen • Vertrauensvolles Personal',
+                'btn-reserve': 'Jetzt buchen',
+                'btn-details': 'Mehr Details',
                 'lifestyle-title': 'Einzigartige Momente, maßgeschneidert',
+                'lifestyle-intro': 'Die Costa del Sol wird zu Ihrem exklusiven Spielplatz. Entdecken Sie eine raffinierte Lebensweise, bei der jeder Moment orchestriert wird, um unvergessliche Erinnerungen zu schaffen.',
+                'gallery-1-title': 'Prestige Yachting',
+                'gallery-1-desc': 'Erkunden Sie das Mittelmeer an Bord außergewöhnlicher Yachten. Erfahrene Crews, maßgeschneiderte Routen zu den schönsten geheimen Buchten.',
+                'gallery-2-title': 'Exklusives Golf',
+                'gallery-2-desc': 'Legendäre Plätze der Costa del Sol, privilegierte Reservierungen, professionelle Caddies und Zugang zu den selektivsten Clubs.',
+                'gallery-3-title': 'Sterne-Gastronomie',
+                'gallery-3-desc': 'Genießen Sie kulinarische Exzellenz in den renommiertesten Restaurants. Private Köche, exklusive Verkostungen und außergewöhnliche Tische.',
+                'gallery-4-title': 'Private Events',
+                'gallery-4-desc': 'Maßgeschneiderte Abende an außergewöhnlichen Orten. Komplette Organisation, prestigeträchtige Gäste und magische Momente, die speziell für Sie geschaffen wurden.',
                 'discretion-title': 'Vertraulichkeit & Diskretion',
-                'contact-title': 'Ihr privilegierter Zugang'
+                'discretion-p1': 'Diskretion ist das Wesen unseres Services. Wir arbeiten mit strengster Vertraulichkeit, geschützt durch rigorose Geheimhaltungsvereinbarungen.',
+                'discretion-p2': 'Jede Interaktion ist sicher, jede Anfrage wird mit größter Vertraulichkeit behandelt. Ihr Seelenfrieden und Ihr Ruf sind in Expertenhänden.',
+                'discretion-p3': 'Unsere Sicherheitsprotokolle gewährleisten, dass Ihre persönlichen Informationen streng privat bleiben und Sie unsere Services uneingeschränkt genießen können.',
+                'contact-title': 'Ihr privilegierter Zugang',
+                'contact-intro1': 'Unser engagiertes Team steht Ihnen 24/7 zur Verfügung, um alle Ihre Anfragen mit größter Vertraulichkeit zu beantworten.',
+                'contact-intro2': 'Ob für eine dringende Anfrage oder die Planung eines großen Projekts, wir verpflichten uns, Ihnen eine schnelle Antwort und maßgeschneiderte Lösungen zu bieten.',
+                'form-name': 'Name',
+                'form-email': 'Email',
+                'form-phone': 'Telefon',
+                'form-message': 'Ihre private Nachricht',
+                'btn-submit': 'Meine private Anfrage senden',
+                'contact-email': 'Private Email',
+                'contact-whatsapp': 'VIP WhatsApp',
+                'footer-legal': 'Impressum',
+                'footer-privacy': 'Datenschutz',
+                'footer-terms': 'Bedingungen'
             },
             it: {
                 'nav-services': 'Servizi',
@@ -976,9 +1255,51 @@
                 'hero-subtitle': 'Concierge di lusso sulla Costa del Sol',
                 'hero-btn': 'Contatto privato',
                 'services-title': 'I Nostri Servizi Esclusivi',
+                'services-intro': 'La nostra concierge di lusso vi offre accesso privilegiato a un mondo di esperienze eccezionali. Ogni servizio è progettato su misura per soddisfare le vostre esigenze più raffinate, con attenzione meticolosa ai dettagli e impegno assoluto verso l\'eccellenza.',
+                'service-1-title': 'Gestione proprietà',
+                'service-1-desc': 'Affidateci la gestione integrale delle vostre residenze di prestigio. Il nostro team di esperti assicura manutenzione preventiva, sorveglianza 24h/24, cura di giardini e piscine.',
+                'service-1-details': 'Manutenzione completa • Personale domestico • Preparazione prima dell\'arrivo • Villa profumata e fornita',
+                'service-2-title': 'Trasporto privato',
+                'service-2-desc': 'Viaggiate secondo i vostri standard di eccellenza. Jet privati per i vostri spostamenti internazionali, yacht di lusso per esplorare il Mediterraneo, veicoli di prestigio con autista privato.',
+                'service-2-details': 'Autista Mercedes/Maybach • Supercar Ferrari/Lamborghini • Jet privati • Yacht con equipaggio',
+                'service-3-title': 'Esperienze esclusive',
+                'service-3-desc': 'Accedete all\'inaccessibile. Tavoli privati nei ristoranti stellati, palchi VIP agli eventi culturali e sportivi, feste private in luoghi eccezionali.',
+                'service-3-details': 'Ristoranti Michelin • Club privati VIP • Eventi esclusivi • Esperienze su misura',
+                'service-4-title': 'Benessere e salute',
+                'service-4-desc': 'La vostra salute merita l\'eccellenza. Consultazioni private con i migliori specialisti, programmi di benessere personalizzati, allenatori sportivi e nutrizionisti di fama.',
+                'service-4-details': 'Allenatori personali • Spa mobile • Medici privati • Nutrizione personalizzata',
+                'service-5-title': 'Sicurezza e personale',
+                'service-5-desc': 'La vostra tranquillità è inestimabile. Personale domestico accuratamente selezionato, protezione ravvicinata discreta, sistemi di sicurezza all\'avanguardia.',
+                'service-5-details': 'Tate multilingue • Sicurezza 24/7 • Scuole internazionali • Personale di fiducia',
+                'btn-reserve': 'Prenota ora',
+                'btn-details': 'Più dettagli',
                 'lifestyle-title': 'Momenti unici, su misura',
+                'lifestyle-intro': 'La Costa del Sol diventa il vostro campo da gioco esclusivo. Scoprite uno stile di vita raffinato dove ogni momento è orchestrato per creare ricordi indimenticabili.',
+                'gallery-1-title': 'Yachting di prestigio',
+                'gallery-1-desc': 'Esplorate il Mediterraneo a bordo di yacht eccezionali. Equipaggi esperti, itinerari su misura verso le più belle calette segrete.',
+                'gallery-2-title': 'Golf esclusivo',
+                'gallery-2-desc': 'Campi leggendari della Costa del Sol, prenotazioni privilegiate, caddie professionali e accesso ai club più selettivi.',
+                'gallery-3-title': 'Gastronomia stellata',
+                'gallery-3-desc': 'Assaporate l\'eccellenza culinaria nei ristoranti più rinomati. Chef privati, degustazioni esclusive e tavoli eccezionali.',
+                'gallery-4-title': 'Eventi privati',
+                'gallery-4-desc': 'Serate su misura in luoghi eccezionali. Organizzazione completa, ospiti prestigiosi e momenti magici creati appositamente per voi.',
                 'discretion-title': 'Riservatezza e Discrezione',
-                'contact-title': 'Il vostro accesso privilegiato'
+                'discretion-p1': 'La discrezione è l\'essenza stessa del nostro servizio. Operiamo con la più rigorosa riservatezza, protetta da accordi di non divulgazione rigorosi.',
+                'discretion-p2': 'Ogni interazione è sicura, ogni richiesta trattata con la massima riservatezza. La vostra tranquillità e reputazione sono in mani esperte.',
+                'discretion-p3': 'I nostri protocolli di sicurezza garantiscono che le vostre informazioni personali rimangano strettamente private, permettendovi di godere pienamente dei nostri servizi.',
+                'contact-title': 'Il vostro accesso privilegiato',
+                'contact-intro1': 'Il nostro team dedicato è a vostra disposizione 24h/24, 7g/7 per rispondere a tutte le vostre richieste con la massima riservatezza.',
+                'contact-intro2': 'Che si tratti di una richiesta urgente o della pianificazione di un progetto importante, ci impegniamo a offrirvi una risposta rapida e soluzioni su misura.',
+                'form-name': 'Nome',
+                'form-email': 'Email',
+                'form-phone': 'Telefono',
+                'form-message': 'Il vostro messaggio privato',
+                'btn-submit': 'Invia la mia richiesta privata',
+                'contact-email': 'Email privata',
+                'contact-whatsapp': 'WhatsApp VIP',
+                'footer-legal': 'Note legali',
+                'footer-privacy': 'Privacy',
+                'footer-terms': 'Condizioni'
             },
             ru: {
                 'nav-services': 'Услуги',
@@ -990,9 +1311,51 @@
                 'hero-subtitle': 'Люксовый консьерж на Коста-дель-Соль',
                 'hero-btn': 'Частный контакт',
                 'services-title': 'Наши Эксклюзивные Услуги',
+                'services-intro': 'Наш люксовый консьерж предлагает вам привилегированный доступ к миру исключительных впечатлений. Каждая услуга создана на заказ для удовлетворения ваших самых изысканных требований, с тщательным вниманием к деталям и абсолютной приверженностью к совершенству.',
+                'service-1-title': 'Управление недвижимостью',
+                'service-1-desc': 'Доверьте нам полное управление вашими престижными резиденциями. Наша команда экспертов обеспечивает профилактическое обслуживание, круглосуточное наблюдение, уход за садами и бассейнами.',
+                'service-1-details': 'Полное обслуживание • Домашний персонал • Подготовка к приезду • Ароматизированная и укомплектованная вилла',
+                'service-2-title': 'Частный транспорт',
+                'service-2-desc': 'Путешествуйте согласно вашим стандартам совершенства. Частные самолеты для международных поездок, роскошные яхты для исследования Средиземноморья, престижные автомобили с частным шофером.',
+                'service-2-details': 'Шофер Mercedes/Maybach • Суперкары Ferrari/Lamborghini • Частные самолеты • Яхты с экипажем',
+                'service-3-title': 'Эксклюзивные впечатления',
+                'service-3-desc': 'Доступ к недоступному. Частные столики в звездных ресторанах, VIP-ложи на культурных и спортивных мероприятиях, частные вечеринки в исключительных местах.',
+                'service-3-details': 'Рестораны Мишлен • VIP частные клубы • Эксклюзивные события • Индивидуальные впечатления',
+                'service-4-title': 'Велнес и здоровье',
+                'service-4-desc': 'Ваше здоровье заслуживает совершенства. Частные консультации с лучшими специалистами, персонализированные велнес-программы, известные спортивные тренеры и диетологи.',
+                'service-4-details': 'Персональные тренеры • Мобильный спа • Частные врачи • Персонализированное питание',
+                'service-5-title': 'Безопасность и персонал',
+                'service-5-desc': 'Ваше спокойствие бесценно. Тщательно отобранный домашний персонал, дискретная личная охрана, передовые системы безопасности.',
+                'service-5-details': 'Многоязычные няни • Безопасность 24/7 • Международные школы • Доверенный персонал',
+                'btn-reserve': 'Забронировать сейчас',
+                'btn-details': 'Подробнее',
                 'lifestyle-title': 'Уникальные моменты, созданные для вас',
+                'lifestyle-intro': 'Коста-дель-Соль становится вашей эксклюзивной игровой площадкой. Откройте для себя изысканный образ жизни, где каждый момент организован для создания незабываемых воспоминаний.',
+                'gallery-1-title': 'Престижный яхтинг',
+                'gallery-1-desc': 'Исследуйте Средиземноморье на борту исключительных яхт. Опытные экипажи, индивидуальные маршруты к самым красивым секретным бухтам.',
+                'gallery-2-title': 'Эксклюзивный гольф',
+                'gallery-2-desc': 'Легендарные поля Коста-дель-Соль, привилегированные бронирования, профессиональные кэдди и доступ к самым избранным клубам.',
+                'gallery-3-title': 'Звездная гастрономия',
+                'gallery-3-desc': 'Насладитесь кулинарным совершенством в самых известных ресторанах. Частные повара, эксклюзивные дегустации и исключительные столики.',
+                'gallery-4-title': 'Частные мероприятия',
+                'gallery-4-desc': 'Индивидуальные вечера в исключительных местах. Полная организация, престижные гости и волшебные моменты, созданные специально для вас.',
                 'discretion-title': 'Конфиденциальность и Дискретность',
-                'contact-title': 'Ваш привилегированный доступ'
+                'discretion-p1': 'Дискретность - это сама суть нашего сервиса. Мы работаем с строжайшей конфиденциальностью, защищенной строгими соглашениями о неразглашении.',
+                'discretion-p2': 'Каждое взаимодействие безопасно, каждый запрос обрабатывается с максимальной конфиденциальностью. Ваше спокойствие и репутация в экспертных руках.',
+                'discretion-p3': 'Наши протоколы безопасности гарантируют, что ваша личная информация остается строго конфиденциальной, позволяя вам в полной мере наслаждаться нашими услугами.',
+                'contact-title': 'Ваш привилегированный доступ',
+                'contact-intro1': 'Наша преданная команда в вашем распоряжении 24/7 для ответа на все ваши запросы с максимальной конфиденциальностью.',
+                'contact-intro2': 'Будь то срочный запрос или планирование крупного проекта, мы обязуемся предоставить вам быстрый ответ и индивидуальные решения.',
+                'form-name': 'Имя',
+                'form-email': 'Email',
+                'form-phone': 'Телефон',
+                'form-message': 'Ваше частное сообщение',
+                'btn-submit': 'Отправить мой частный запрос',
+                'contact-email': 'Частный Email',
+                'contact-whatsapp': 'VIP WhatsApp',
+                'footer-legal': 'Правовая информация',
+                'footer-privacy': 'Конфиденциальность',
+                'footer-terms': 'Условия'
             },
             ar: {
                 'nav-services': 'الخدمات',
@@ -1004,9 +1367,51 @@
                 'hero-subtitle': 'خدمة الكونسيرج الفاخرة في كوستا ديل سول',
                 'hero-btn': 'اتصال خاص',
                 'services-title': 'خدماتنا الحصرية',
+                'services-intro': 'تقدم لكم خدمة الكونسيرج الفاخرة الخاصة بنا وصولاً مميزاً إلى عالم من التجارب الاستثنائية. كل خدمة مصممة خصيصاً لتلبية متطلباتكم الأكثر رقياً، مع اهتمام دقيق بالتفاصيل والتزام مطلق بالتميز.',
+                'service-1-title': 'إدارة العقارات',
+                'service-1-desc': 'اعهدوا إلينا بالإدارة الشاملة لمساكنكم المرموقة. فريق خبرائنا يضمن الصيانة الوقائية والمراقبة على مدار الساعة وصيانة الحدائق والمسابح.',
+                'service-1-details': 'صيانة شاملة • طاقم منزلي • تحضير قبل الوصول • فيلا معطرة ومجهزة',
+                'service-2-title': 'النقل الخاص',
+                'service-2-desc': 'سافروا وفقاً لمعايير التميز الخاصة بكم. طائرات خاصة لرحلاتكم الدولية، يخوت فاخرة لاستكشاف البحر المتوسط، مركبات مرموقة مع سائق خاص.',
+                'service-2-details': 'سائق مرسيدس/مايباخ • سيارات فيراري/لامبورغيني الفائقة • طائرات خاصة • يخوت مع طاقم',
+                'service-3-title': 'تجارب حصرية',
+                'service-3-desc': 'الوصول إلى ما لا يمكن الوصول إليه. طاولات خاصة في المطاعم الحائزة على نجوم، مقاصير VIP في الفعاليات الثقافية والرياضية، حفلات خاصة في أماكن استثنائية.',
+                'service-3-details': 'مطاعم ميشلان • نوادي VIP خاصة • فعاليات حصرية • تجارب مخصصة',
+                'service-4-title': 'العافية والصحة',
+                'service-4-desc': 'صحتكم تستحق التميز. استشارات خاصة مع أفضل المختصين، برامج عافية مخصصة، مدربين رياضيين وأخصائيي تغذية مشهورين.',
+                'service-4-details': 'مدربين شخصيين • سبا متنقل • أطباء خاصون • تغذية مخصصة',
+                'service-5-title': 'الأمن والموظفين',
+                'service-5-desc': 'راحة بالكم لا تقدر بثمن. موظفين منزليين مختارين بعناية، حماية شخصية سرية، أنظمة أمان متطورة.',
+                'service-5-details': 'مربيات متعددات اللغات • أمن 24/7 • مدارس دولية • موظفين موثوقين',
+                'btn-reserve': 'احجز الآن',
+                'btn-details': 'المزيد من التفاصيل',
                 'lifestyle-title': 'لحظات فريدة، مصممة خصيصاً لكم',
+                'lifestyle-intro': 'تصبح كوستا ديل سول ملعبكم الحصري. اكتشفوا أسلوب حياة راقي حيث كل لحظة منسقة لخلق ذكريات لا تُنسى.',
+                'gallery-1-title': 'يخوت مرموقة',
+                'gallery-1-desc': 'استكشفوا البحر المتوسط على متن يخوت استثنائية. أطقم ذات خبرة، مسارات مخصصة إلى أجمل الخلجان السرية.',
+                'gallery-2-title': 'غولف حصري',
+                'gallery-2-desc': 'ملاعب أسطورية في كوستا ديل سول، حجوزات مميزة، كاديز محترفين ووصول إلى أكثر النوادي انتقائية.',
+                'gallery-3-title': 'فن الطهي المتميز',
+                'gallery-3-desc': 'تذوقوا التميز الطهوي في أشهر المطاعم. طهاة خاصون، تذوقات حصرية وطاولات استثنائية.',
+                'gallery-4-title': 'فعاليات خاصة',
+                'gallery-4-desc': 'أمسيات مخصصة في أماكن استثنائية. تنظيم كامل، ضيوف مرموقون ولحظات سحرية مخلوقة خصيصاً لكم.',
                 'discretion-title': 'السرية والكتمان',
-                'contact-title': 'وصولكم المميز'
+                'discretion-p1': 'الكتمان هو جوهر خدمتنا. نعمل بأقصى درجات السرية، محمية باتفاقيات عدم إفشاء صارمة.',
+                'discretion-p2': 'كل تفاعل آمن، كل طلب يُعامل بأقصى درجات السرية. راحة بالكم وسمعتكم في أيدٍ خبيرة.',
+                'discretion-p3': 'بروتوكولات الأمان لدينا تضمن بقاء معلوماتكم الشخصية سرية تماماً، مما يتيح لكم الاستمتاع الكامل بخدماتنا.',
+                'contact-title': 'وصولكم المميز',
+                'contact-intro1': 'فريقنا المخصص في خدمتكم 24/7 للرد على جميع طلباتكم بأقصى درجات السرية.',
+                'contact-intro2': 'سواء كان طلباً عاجلاً أو تخطيطاً لمشروع كبير، نلتزم بتقديم رد سريع وحلول مخصصة لكم.',
+                'form-name': 'الاسم',
+                'form-email': 'البريد الإلكتروني',
+                'form-phone': 'الهاتف',
+                'form-message': 'رسالتكم الخاصة',
+                'btn-submit': 'إرسال طلبي الخاص',
+                'contact-email': 'بريد إلكتروني خاص',
+                'contact-whatsapp': 'واتساب VIP',
+                'footer-legal': 'الإشعار القانوني',
+                'footer-privacy': 'الخصوصية',
+                'footer-terms': 'الشروط'
             }
         };
 
@@ -1040,6 +1445,14 @@
                 const key = element.getAttribute('data-translate');
                 if (translations[lang] && translations[lang][key]) {
                     element.textContent = translations[lang][key];
+                }
+            });
+
+            // Translate placeholders
+            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
                 }
             });
             
@@ -1139,5 +1552,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c56633d3d6d58e',t:'MTc1NzQwNzQxOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c57a2d05bcd58e',t:'MTc1NzQwODIzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
